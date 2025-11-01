@@ -1,0 +1,102 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /* Include padding and border in element width */
+}
+/* put the container2 in grid-template-areas and give it a gap of 20px */
+.container5 {
+    display: grid;
+    grid-template-areas:
+        "head"
+        "nav"
+        "intro"
+        "card1"
+        "card2"
+        "card3"
+        "card4"
+        "card5"
+        "card6"
+        "card7"
+        "foot";
+    gap: 2px;
+    padding: 0px;
+    background-color: #848FA5;
+    color: #0D1321;
+    min-height: 100%;
+    width: 100%;
+}
+/* put the film-card in the grid-template-areas */
+.film-card {
+    max-width: 300px; /* Set maximum width for the film cards */
+    height: auto; /* Maintain aspect ratio */
+
+    background-size: cover; /* Ensure the background image covers the card */
+    background-position: center; /* Center the background image */
+    border-radius: 10px; /* Rounded corners for the cards */
+    margin: 10px; /* Space between cards */
+    display: flex; /* Flexbox for centering text */
+    align-items: flex-end; /* Align text to the bottom */
+    color: rgb(122, 11, 11); /* Text color */
+    padding: 40px; /* Padding for text */
+}
+
+.film-card-1 {
+    grid-area: card1;
+    background-image: url('../img/favorite-movies-series/AOT.jpg');
+    height: auto; /* Maintain aspect ratio */
+}
+
+.film-card-2 {
+    grid-area: card2;
+    background-image: url('../img/favorite-movies-series/DB-Movies.jpg');
+    height: auto; /* Maintain aspect ratio */
+}
+
+.film-card-3 {
+    grid-area: card3;
+    background-image: url('../img/favorite-movies-series/Goku.jpg');
+    height: auto; /* Maintain aspect ratio */
+}
+
+.film-card-4 {
+    grid-area: card4;
+    background-image: url('../img/favorite-movies-series/gojo-vs-sukuna2.jpg');
+    height: auto; /* Maintain aspect ratio */
+}
+
+.film-card-5 {
+    grid-area: card5;
+    background-image: url('../img/favorite-movies-series/Naruto-Shippuden.jpg');
+    height: auto; /* Maintain aspect ratio */
+}
+
+.film-card-6 {
+    grid-area: card6;
+    background-image: url('../img/favorite-movies-series/Sun-Jinwoo.jpg');
+    height: auto; /* Maintain aspect ratio */
+}
+
+.film-card-7 {
+    grid-area: card7;
+    background-image: url('../img/favorite-movies-series/sung-jin-woo-solo.jpg');
+    height: auto; /* Maintain aspect ratio */
+}
+
+
+/* add a madiaquery for the film-card to make it responsive for desktop */
+@media only screen and (min-width: 1024px) {
+    .container5 {
+        grid-template-areas:
+            "head"
+            "nav"
+            "intro"
+            "card1 card2"
+            "card1 card2"
+            "card3 card4"
+            "card3 card4"
+            "card5 card6 card7"
+            "card5 card6 card7"
+            "foot";
+            background-color: #0D1321;
+    }
+}

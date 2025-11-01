@@ -1,0 +1,207 @@
+/* Root variables for consistent theming */
+:root {
+    --dark-bg: #1a1a1a;
+    --darker-bg: #121212;
+    --accent: #3498db;
+    --text: #ffffff;
+    --dark-square: #2c3e50;
+    --light-square: #34495e;
+}
+
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic body styling */
+body {
+    background-color: var(--dark-bg);
+    color: var(--text);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Main container layout */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: var(--darker-bg);
+}
+
+/* Game container styling */
+#game-container {
+    display: flex;
+    gap: 30px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Side panel styling */
+.game-info {
+    width: 250px;
+}
+
+/* Timer display styling */
+#timer-display {
+    margin-bottom: 20px;
+    background: var(--darker-bg);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* Individual timer styling */
+.timer {
+    padding: 10px;
+    background-color: var(--dark-bg);
+    border: 1px solid var(--accent);
+    margin-bottom: 5px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* Move history panel styling */
+#move-history {
+    background-color: var(--darker-bg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    height: 400px;
+    overflow-y: auto;
+    border-radius: 10px;
+}
+
+/* Individual move entry styling */
+.move {
+    padding: 8px;
+    margin: 4px 0;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 5px;
+}
+
+/* Chess piece styling */
+.piece {
+    width: 60px;
+    height: 60px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 1;
+    filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.3));
+}
+
+/* Chess board grid layout */
+.board {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    width: 560px;
+    height: 560px;
+    border: 3px solid var(--accent);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Chess square styling */
+.square {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+/* Light square color */
+.square.white {
+    background-color: var(--light-square);
+}
+
+/* Dark square color */
+.square.black {
+    background-color: var(--dark-square);
+}
+
+/* Selected square highlight */
+.square.selected {
+    background-color: rgba(52, 152, 219, 0.5);
+}
+
+/* Valid move indicator */
+.square.valid-move::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(46, 204, 113, 0.4);
+    border-radius: 50%;
+}
+
+/* Control buttons container */
+.controls {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+/* Button styling */
+button {
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+/* Disabled button state */
+button:disabled {
+    background-color: #95a5a6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Check warning message styling */
+.check-warning {
+    background-color: #e74c3c;
+    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+}
+
+/* Pawn promotion dialog styling */
+.promotion-dialog {
+    background-color: var(--darker-bg);
+    border: 2px solid var(--accent);
+    border-radius: 12px;
+}
+
+/* Return button styling */
+.return-button {
+    padding: 10px 20px;
+    background-color: #ff4444;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    font-size: 16px;
+}
+
+/* Return button hover effect */
+.return-button:hover {
+    background-color: #cc0000;
+}

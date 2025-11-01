@@ -1,0 +1,129 @@
+/* Algemene stijlen */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* 🔹 Hoofdcontainer - Bevat alle secties */
+.container4 {
+    animation: fadeIn 1.5s ease-out;
+    display: grid;
+    grid-template-areas:
+        "head"
+        "nav"
+        "intro"
+        "cards"
+        "foot";
+    gap: 10px; /* Ruimte tussen secties */
+    padding: 0px;
+    font-family: Arial, sans-serif;
+    background-color: #848FA5;
+    color: #0D1321;
+    min-height: 100vh; /* Zorgt ervoor dat de container altijd de volledige hoogte van het scherm inneemt */
+    width: 100%;
+}
+
+/* 🔹 Header */
+.home-header {
+    grid-area: head;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #0D1321;
+    color: white;
+    padding: 20px;
+}
+
+/* 🔹 Navigatiebalk */
+.navigation {
+    grid-area: nav;
+    background-color: #1D2D50;
+    text-align: center;
+    padding: 15px;
+}
+
+.navigation ul {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    list-style: none;
+}
+
+.navigation ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navigation ul li a:hover {
+    text-decoration: underline;
+}
+
+/* 🔹 Introductie sectie */
+.intro {
+    grid-area: intro;
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.favorite-games-list {
+    list-style: none;
+    padding-top: 10px;
+}
+
+.favorite-games-list li {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* 🔹 Game kaarten sectie */
+.game-cards-section {
+    grid-area: cards;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsief raster */
+    gap: 20px;
+    justify-items: center; /* Centraal uitlijnen */
+}
+
+/* 🔹 Stijl voor individuele game kaarten */
+.game-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    max-width: 250px;
+    height: 350px;
+    color: white;
+    border-radius: 10px;
+    padding: 200px;
+    position: relative;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* 🔹 Hover effect voor de game kaarten */
+.game-card:hover {
+    transform: scale(1.05);
+}
+
+/* 🔹 Achtergrondafbeeldingen voor de kaarten */
+.game-card-1 { background-image: url("../img/favorite-games/black-myth.jpg"); }
+.game-card-2 { background-image: url("../img/favorite-games/assassins-creed-the-ezio-collection.jpg"); }
+.game-card-3 { background-image: url("../img/favorite-games/Dragon-Ball-Xenoverse-2.jpg"); }
+.game-card-4 { background-image: url("../img/favorite-games/Naruto-Shippuden-Ultimate-Ninja-Storm-4-Banner.jpg"); }
+
+/* 🔹 Footer */
+.footer {
+    grid-area: foot;
+    background-color: #0D1321;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}

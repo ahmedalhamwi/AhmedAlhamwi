@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(
+        45deg,
+        #ae0606,
+        #0b597f,
+        #4b3395,
+        #f84b01
+    );
+    background-size: 400% 400%;
+    animation: gradientBG 30s ease infinite;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #212121;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 20px;
+    padding: 20px;
+}
+
+main {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+}
+
+.rules-grid {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.score-history {
+    margin-bottom: 20px;
+}
+
+.dice-container {
+    display: flex;
+    justify-content: center;
+    gap: 110px;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.dice {
+    font-size: 100px;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.credits {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.message-box {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.betting {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#betAmount {
+    width: 100px;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+.placeBet, .allIn {
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #4b3395;
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+.placeBet:hover, .allIn:hover {
+    background-color: #362569;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #4b3395;
+    color: white;
+}
+
+button:hover {
+    background-color: #362569;
+}
+
+button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 36px;
+    color: #212121;
+}
+
+.score-history {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.score-history h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #4b3395;
+}
+
+.player-history-list {
+    max-height: 150px;
+    overflow-y: auto; /* Of gebruik scroll als je altijd een scrollbar wilt zien */
+    margin-top: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.player-history-item {
+    padding: 8px 10px;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.player-history-item:last-child {
+    border-bottom: none;
+}
+
+.player-history-item:nth-child(even) {
+    background-color: rgba(75, 51, 149, 0.05);
+}

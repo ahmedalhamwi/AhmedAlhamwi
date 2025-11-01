@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Galada', cursive; /* Apply Galada font to all headings */
+}
+
+p {
+    font-family: 'Great Vibes', cursive; /* Apply Great Vibes font to all paragraphs */
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #F0F4F8; /* Updated background color for a lighter theme */
+}
+
+@media (min-width: 1024px) {
+    html, body {
+        background-color: #0D1321;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container {
+    animation: fadeIn 1.5s ease-out;
+    display: grid;
+    grid-template-areas:
+        "head"
+        "nav"
+        "intro"
+        "qual"
+        "exp"
+        "skill"
+        "other"
+        "foot";
+    gap: 20px;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #848FA5;
+    color: #0D1321;
+    min-height: 100%;
+    width: 100%;
+}
+
+.home-header {
+    animation: slideIn 1s ease-out;
+    grid-area: head;
+    display: flex;
+    align-items: center;
+    background-color: #1D2D44;
+    color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.logo {
+    width: 60px; /* Increased width for better visibility */
+    height: 60px; /* Increased height for better visibility */
+    background-size: cover;
+    margin-right: 20px; /* Increased margin for better spacing */
+    border-radius: 5px;
+}
+
+.navigation {
+    animation: slideIn 1s ease-out 0.5s backwards;
+    grid-area: nav;
+    background-color: #34495E; /* Updated navigation background color */
+    padding: 15px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.navigation ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.navigation a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+}
+
+.navigation a:hover {
+    background-color: #9E0031;
+    border-radius: 3px;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+section {
+    padding: 40px; /* Increased padding for better visibility */
+    background-color: #2980B9; /* Updated section background color */
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(13, 19, 33, 0.2);
+    width: 100%;
+}
+
+.intro {
+    grid-area: intro;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.my-picture {
+    width: 200px;
+    height: 200px;
+    background-image: url('../img/selfie-Ahmed.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    margin: 20px 0;
+    border: 5px solid #2980B9; /* Updated border color for the profile picture */
+    animation: scaleIn 1.5s ease-out 1s backwards;
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.qualities { 
+    grid-area: qual; 
+}
+.experience { 
+    grid-area: exp; 
+}
+.skills { 
+    grid-area: skill; 
+}
+.other-experience { 
+    grid-area: other; 
+}
+.footer {
+    grid-area: foot;
+    background-color: #1D2D44;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+@media (min-width: 1024px) {
+    .container {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+            "head head head head"
+            "nav  nav  nav  nav"
+            "intro intro intro intro"
+            "qual qual exp  exp"
+            "skill skill other other"
+            "foot foot foot foot";
+        max-width: 100%;
+        margin: 0;
+        background-color: #0D1321;
+    }
+
+    section {
+        transition: transform 0.3s ease;
+    }
+
+    section:hover {
+        transform: translateY(-5px);
+    }
+
+    .navigation ul {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .navigation a {
+        font-size: 1.2em;
+    }
+
+    .my-picture {
+        width: 250px;
+        height: 250px;
+        border: 8px solid #9E0031;
+    }
+
+    h1, h2 {
+        color: #E74C3C; /* Updated header color for better contrast */
+    }
+}

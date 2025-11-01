@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sea Battle Game</title>
+    <link rel="stylesheet" href="/ZeeSlag/css/main.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1 class="name-tag">Sea Battle Game</h1>
+        <div class="player-one-score-board">
+            <table>
+            <tr>
+                <th>Player One</th>
+            </tr>    
+            <tr>
+              <td>Hits:</td>
+              <td class="player-one-hits">0</td>
+            </tr>
+            <tr>
+              <td>Misses:</td>
+              <td class="player-one-misses">0</td>
+            </tr>
+            <tr>
+              <td>Score:</td>
+              <td class="player-one-score">0</td>
+            </tr>
+          </table>
+        </div>
+        <div class="player-two-score-board">            
+            <table>
+                <tr>
+                    <th>Player Two</th>
+                </tr>  
+            <tr>
+              <td>Hits:</td>
+              <td class="player-two-hits">0</td>
+            </tr>
+            <tr>
+              <td>Misses:</td>
+              <td class="player-two-misses">0</td>
+            </tr>
+            <tr>
+              <td>Score:</td>
+              <td class="player-two-score">0</td>
+            </tr>
+          </table>
+        </div>
+        <div class="message">Press "Start" to begin the game.</div>
+        <div class="game-grids">
+          <div class="player1-grid"></div>
+          <div class="player2-grid"></div>
+      </div>
+        <div class="buttons">
+            <button class="start-btn">Start</button>
+            <button class="reset-btn">Reset</button>
+            <button class="finish-btn" style="display: none;">Finish</button>
+        </div>
+    </div>
+    <script src="/ZeeSlag/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,209 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e9f5ff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.hidden {
+    display: none;
+}
+
+.player-one-score-board{
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    position: absolute;
+    right: 16%;
+    top: 20%;
+}
+.player-two-score-board{
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    position:absolute;
+    left: 16%;
+    top: 20%;
+}
+
+h1 {
+    text-align: center;
+    color: #007BFF;
+    margin: 0px;
+}
+
+/* Game Container */
+.game-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Game Grids */
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(11, 70px);
+    grid-auto-rows: 70px;
+    background-color: rgb(137, 180, 230);
+    width: 770px;
+    position: relative;
+    margin-top: 20px;
+}
+
+.div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    user-select: none;
+}
+
+.ship {
+    background-color: #4CAF50;
+    border: 1px solid #2E7D32;
+}
+
+.ship-hit {
+    background-color: #FF0000; 
+    color: white;
+    position: relative;
+}
+
+.ship-hit::before, .ship-hit::after {
+    content: '';
+    position: absolute;
+    background-color: white;
+    width: 80%;
+    height: 2px;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+}
+
+.ship-hit::after {
+    transform: translateY(-50%) rotate(90deg);
+}
+
+.miss {
+    background-color: rgb(137, 180, 230);
+    position: relative;
+}
+
+.miss::before {
+    content: '';
+    position: absolute;
+    background-color: #000;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Message Box */
+.message {
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    position:fixed;
+    left: 10%;
+    bottom: 40%;
+}
+.final-place{
+    position: fixed;
+    top: 45%;
+    left: 33%;
+    width: 400px;
+    height: 20px;
+    font-size: larger;
+    text-align: center;
+    z-index: 1000;  
+}
+
+.start-btn , .reset-btn , .finish-btn{
+    position: fixed;
+    bottom: 50%;
+    left: 73%;
+}
+
+.finish-btn{
+    bottom: 40%;
+}
+
+.start-btn{
+    bottom: 30%;
+}
+
+/* Buttons */
+button {
+    margin: 10px 5px;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Media query for screens 14 inches wide  */
+@media screen and (max-width: 1366px) {
+    body {
+        font-size: 14px; /* Reduce font size for smaller screens */
+    }
+
+    .wrapper {
+        grid-template-columns: repeat(11, 50px); /* Smaller cells */
+        grid-auto-rows: 50px;
+        width: 550px; /* Adjust grid width */
+    }
+
+    .div {
+        font-size: 12px; /* Smaller font size in grid cells */
+    }
+
+    button {
+        padding: 8px 12px; /* Adjust button size */
+        font-size: 14px;
+    }
+
+    .message {
+        font-size: 14px; /* Adjust message box font size */
+        padding: 8px;
+    }
+    .player-one-score-board , .player-two-score-board{
+        font-size: smaller;
+    }
+
+}

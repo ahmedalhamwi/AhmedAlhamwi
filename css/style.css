@@ -1,0 +1,105 @@
+:root {
+  /* Light theme colors */
+  --bg-color: #ffffff;
+  --text-color: #212529;
+  --primary-color: #0d6efd;
+  --secondary-color: #6c757d;
+  --contact-bg-color: #6c757d;
+  --contact-text-color: white;
+  --contact-link-color: #f8f9fa;
+  --contact-link-hover-color: #e2e6ea;
+  --form-control-bg: #ffffff;
+  --form-control-text: #212529;
+  --btn-bg: white;
+  --btn-text: #6c757d;
+  --btn-hover-bg: #e2e6ea;
+  --btn-hover-text: #495057;
+}
+
+[data-theme="dark"] {
+  /* Dark theme colors - updated to cooler dark colors */
+  --bg-color: #0a0f2c;
+  --text-color: #cbd5e1;
+  --primary-color: #22d3ee;
+  --secondary-color: #94a3b8;
+  --contact-bg-color: #1e293b;
+  --contact-text-color: #cbd5e1;
+  --contact-link-color: #38bdf8;
+  --contact-link-hover-color: #7dd3fc;
+  --form-control-bg: #334155;
+  --form-control-text: #e0f2fe;
+  --btn-bg: #1e293b;
+  --btn-text: #38bdf8;
+  --btn-hover-bg: #3b82f6;
+  --btn-hover-text: #e0f2fe;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+#contact {
+  background-color: var(--contact-bg-color);
+  color: var(--contact-text-color);
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+#contact a {
+  color: var(--contact-link-color);
+  text-decoration: underline;
+}
+
+#contact a:hover {
+  color: var(--contact-link-hover-color);
+  text-decoration: none;
+}
+
+.contact-form .form-control {
+  background-color: var(--form-control-bg);
+  border: none;
+  color: var(--form-control-text);
+}
+
+.contact-form .form-control::placeholder {
+  color: var(--contact-link-color);
+}
+
+.contact-form .btn {
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  font-weight: bold;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+}
+
+.contact-form .btn:hover {
+  background-color: var(--btn-hover-bg);
+  color: var(--btn-hover-text);
+}
+
+.about-me-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  margin-top: 1rem;
+}
+
+.about-me-img:hover {
+  transform: scale(1.05);
+}
+
+#about-me {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}

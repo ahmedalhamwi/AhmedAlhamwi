@@ -1,0 +1,103 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container1 {
+    animation: fadeIn 1.5s ease-out;
+    display: grid;
+    grid-template-areas:
+        "head"
+        "nav"
+        "intro"
+        "card"
+        "card"
+        "card"
+        "foot";
+    gap: 10px;
+    background-color: #848FA5;
+    color: #0D1321;
+    min-height: 100%;
+    width: 100%;
+}
+.carousel {
+    display: flex;
+    overflow: hidden; /* Hide overflow for a cleaner look */
+    position: relative; /* Positioning for navigation buttons */
+    gap: 10px; /* Reduced gap for tighter layout */
+    padding: 20px 0; /* Increased padding for better visibility */
+    height: auto; /* Allow height to adjust based on content */
+    justify-content: center; /* Center the carousel items */
+    align-items: center; /* Center items vertically */
+    flex-wrap: wrap; /* Allow items to wrap for smaller screens */
+}
+
+.carousel-item {
+    flex: 0 0 auto; /* Maintain fixed width */
+    transition: transform 0.5s ease; /* Smooth transition */
+}
+
+.carousel-description {
+    text-align: center; /* Center the text */
+    margin-top: 15px; /* Add space above the text */
+    font-size: 1.1em; /* Slightly larger font size for readability */
+    color: #0D1321; /* Match the text color with the theme */
+    font-weight: bold; /* Make the text bold */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle text shadow */
+    background-color: #2980B9; /* Updated section background color */
+    border-radius: 10px;
+}
+
+.carousel-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.carousel-item img {
+    max-width: 200px; /* Set maximum width for images */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover;
+    border-radius: 8px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.carousel-item img:hover {
+    opacity: 1;
+}
+.carousel-item.active {
+    transform: scale(1.05);
+}
+
+/* add a media query for the carousel to make it responsive for desktop */
+@media only screen and (min-width: 1024px) {
+    .container1 {
+        display: grid;
+        grid-template-areas:
+            "head"
+            "nav"
+            "intro"
+            "card"
+            "card"
+            "card"
+            "foot";
+        gap: 10px;
+        background-color: #0D1321;
+        color: #0D1321;
+        min-height: 100%;
+        width: 100%;
+    }
+}

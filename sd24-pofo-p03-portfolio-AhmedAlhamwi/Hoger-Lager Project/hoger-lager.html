@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoger-Lager</title>
+    <link rel="stylesheet" href="css2/style2.css">
+    <script defer src="js2/script.js"></script>
+</head>
+<body>
+    <!-- Header section -->
+    <header>
+        <h1>Hoger-Lager</h1>
+    </header>
+
+    <div class="container">
+        <main>
+            <!-- Score history section -->
+            <div class="score-history">
+                <h2>Spelers Historie</h2>
+                <div class="player-history-list"></div>
+            </div>
+
+            <!-- Dice display section -->
+            <div class="dice-container">
+                <div class="dice text-center player-dice-one">&#9858;</div>
+                <div class="dice text-center player-dice-two">&#9859;</div>
+            </div>
+
+            <!-- Message display section -->
+            <div class="message-box">
+                <p>Zet een geldig credit bedrag in om spel te starten.</p>
+            </div>
+
+            <!-- Betting section -->
+            <div class="betting">
+                <label for="betAmount">Voer uw inzet in (99, 110, 120, 250, 350): </label>
+                <input type="number" id="betAmount" name="betAmount" min="99" max="350">
+                <button class="placeBet">Inzetten</button>
+                <button class="allIn">All In</button>
+            </div>
+           
+            <!-- Game control buttons -->
+            <div class="controls">
+                <button class="higher-button">Hoger</button>
+                <button class="lower-button">Lager</button>
+                <button class="gelijk-button">Gelijk</button>
+            </div>
+
+            <!-- Player credits display -->
+            <div class="credits">
+                <p>Credits: <span class="player-credits">1000</span></p>
+            </div>
+        </main>
+
+        <!-- Game rules section -->
+        <aside class="rules-grid">
+            <article>
+                <h2>Spelregels</h2>
+                <p><b>Welkom in ons spel Hoger-Lager, hier onder vindt u onze spelregels.
+                    Wij adviseren u om ze zorgvuldig door te nemen.
+                    Wij wensen u heel veel succes en veel plezier met het spelen!</b></p>
+                <ol>
+                    <!-- List of game rules -->
+                    <li>De gebruiker krijgt op het scherm twee dobbelstenen te zien, hij mag een keuze maken of de dobbelstenen hoger, lager of op 7 zullen landen als je beide getallen bij elkaar optelt.
+                        Iedereen heeft hun startbedrag op 1000 credits.</li>
+                    <li>De speler wint het spel wanneer een credit van 2100 heeft gehaald,
+                        en verliest wanneer hij een credit van -160 heeft gehaald.</li>
+                    <li>De spelers zullen hun vermogen inzetten met 99, 110, 120, 250, of 350 credits per keer.</li>
+                    <li>Als de spelers "hoger" dan 7 gokken, en de dobbelstenen bij elkaar opgeteld zijn meer dan 7, krijgt de speler 1.5 keer zijn inzet.
+                        Precies hetzelfde geldt voor als de speler lager dan 7 gokt, en de som van de dobbelstenen niet 7 overschrijdt.</li>
+                    <li>Als de speler het waagt om te gokken op 7, en de som van beide dobbelstenen exact op 7 terecht komt,
+                        wordt de speler beloont met 2.4 keer zijn inzet.</li>
+                    <li>Zodra de spelers in de min komen, mogen ze verder spelen tot aan de -160 credits.</li>
+                    <li>Spelers mogen opgeven wanneer ze willen, met het knopje "Quit Game". wanneer dat gebeurt word je terug gebracht naar de Home pagina.</li>
+                </ol>
+            </article>
+        </aside>
+    </div>
+
+    <footer></footer>
+</body>
+</html>

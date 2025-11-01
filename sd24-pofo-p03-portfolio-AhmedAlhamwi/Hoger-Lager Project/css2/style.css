@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(
+        45deg,
+        #f02929,
+        #087bb5,
+        #6d49d8,
+        #f79000
+    );
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.headings{
+    font-size: 30px;
+    font-weight: 600;
+    color: #212121;
+    margin-bottom: 10px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+}
+
+.text-center{
+    text-align: center;
+    font-size: 1.5em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    color: #212121;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.dice-one-player{
+    position: absolute;
+    top: 20%; 
+    width: 45%;
+    height: 47%;
+    right: 47%;
+}
+
+.dice-two-player{
+    position: absolute;
+    top: 20%;
+    width: 45%;
+    height: 47%;
+    left: 47%;
+}
+
+.message-box {
+    position: absolute;
+    top: 55%;
+    left: 25%;
+    width: 50%;
+    border: 4px solid #6f1489;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    background-color: rgba(154, 9, 203, 0.9);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.play-button {
+    position: absolute;
+    top: 67%;
+    left: 35%;
+    width: 30%;
+    height: 13%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ea1d07; /* Reddish background */
+    border: 4px solid #bd1e13; /* Darker red border */
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    font-size: 50pt;
+    font-weight: 200;
+    color: #212121;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.play-button:hover {
+    background-color: #e7510c; /* Darker red on hover */
+    border-color: #eae016; /* Even darker red border on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.controls{
+    padding: 10px;
+}
+
+.dice{
+    font-size: 130pt;
+}

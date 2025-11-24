@@ -45,7 +45,7 @@
 
 html {
     scroll-behavior: smooth;
-    background-color: var(--bg-color);
+    background: var(--bg-color);
     color: var(--text-color);
 }
 
@@ -53,25 +53,25 @@ body {
     font-family: var(--font-primary);
     line-height: 1.6;
     color: var(--text-color);
-    background-color: var(--bg-color);
+    background: var(--bg-color);
     overflow-x: hidden;
 }
 
 /* Override some Bootstrap utility classes to use CSS variables for consistent theming */
 .bg-primary {
-    background-color: var(--primary-color) !important;
+    background: var(--primary-color) !important;
 }
 
 .bg-light {
-    background-color: var(--bg-alt) !important;
+    background: var(--bg-alt) !important;
 }
 
 .bg-secondary {
-    background-color: var(--secondary-color) !important;
+    background: var(--secondary-color) !important;
 }
 
 .bg-dark {
-    background-color: var(--primary-color) !important;
+    background: var(--primary-color) !important;
 }
 
 .text-white {
@@ -674,7 +674,7 @@ footer {
         left: -100%;
         top: 70px;
         flex-direction: column;
-        background-color: var(--primary-color);
+        background: var(--primary-color);
         width: 100%;
         text-align: center;
         transition: 0.3s;

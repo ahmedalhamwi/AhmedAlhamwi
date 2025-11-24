@@ -57,6 +57,89 @@ body {
     overflow-x: hidden;
 }
 
+/* Override some Bootstrap utility classes to use CSS variables for consistent theming */
+.bg-primary {
+    background-color: var(--primary-color) !important;
+}
+
+.bg-light {
+    background-color: var(--bg-alt) !important;
+}
+
+.bg-secondary {
+    background-color: var(--secondary-color) !important;
+}
+
+.bg-dark {
+    background-color: var(--primary-color) !important;
+}
+
+.text-white {
+    color: var(--text-color) !important;
+}
+
+/* Navbar override */
+#navbar {
+    background: var(--gradient);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 20px var(--shadow);
+    transition: all 0.3s ease;
+}
+
+/* Navbar links */
+#navbar .nav-link {
+    color: var(--text-color) !important;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+#navbar .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background: var(--light-purple);
+    transition: width 0.3s ease;
+}
+
+#navbar .nav-link:hover::after,
+#navbar .nav-link.active::after {
+    width: 100%;
+}
+
+/* Navbar brand */
+#navbar .navbar-brand {
+    color: var(--text-color) !important;
+    font-weight: 700;
+    text-shadow: 0 0 10px var(--accent-color);
+}
+
+/* Navbar toggler icon color override */
+.navbar-light .navbar-toggler-icon {
+    filter: invert(1);
+}
+
+/* Adjust Bootstrap button outline-light to use CSS variables */
+.btn-outline-light {
+    color: var(--text-color);
+    border-color: var(--text-color);
+}
+
+.btn-outline-light:hover {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+    background-color: transparent;
+}
+
+/* Override section text colors within light and dark backgrounds */
+section, header, footer {
+    color: var(--text-color);
+}
+
+
 /* Container */
 .container {
     max-width: 1200px;

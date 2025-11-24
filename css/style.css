@@ -2,15 +2,15 @@
 
 /* Light Theme Colors */
 :root {
-    --primary-color: #4b0082;
-    --secondary-color: #7a1fa2;
-    --accent-color: #ba68c8;
+    --primary-color: linear-gradient(135deg, #4b0082, #7a1fa2, #ba68c8);
+    --secondary-color: linear-gradient(135deg, #7a1fa2, #a85fbf, #ba68c8);
+    --accent-color: linear-gradient(135deg, #ba68c8, #d39ec4, #c28add);
     --light-purple: #ba68c8;
     --dark-purple: #4b0082;
     --text-color: #1a0033;
     --text-secondary: #311b92;
-    --bg-color: #ffffff;
-    --bg-alt: #f0e6ff;
+    --bg-color: linear-gradient(135deg, #e5d1ff, #f0e6ff);
+    --bg-alt: linear-gradient(135deg, #f3eaff, #f7f1ff);
     --border-color: #7a1fa2;
     --shadow: rgba(122, 31, 162, 0.3);
     --gradient: linear-gradient(135deg, #4b0082, #7a1fa2, #ba68c8);

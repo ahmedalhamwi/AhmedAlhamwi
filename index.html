@@ -238,21 +238,36 @@
     </footer>
 <script src="js/main.js"></script>
 <script>
-    // Simple theme toggle script to add/remove data-theme attribute on html element
+    // Enhanced theme toggle script to fix toggle issue
     const toggleBtn = document.getElementById('theme-toggle');
     const htmlEl = document.documentElement;
 
     if(toggleBtn) {
         toggleBtn.addEventListener('click', () => {
-            if(htmlEl.getAttribute('data-theme') === 'dark'){
+            const isDark = htmlEl.getAttribute('data-theme') === 'dark';
+            if(isDark){
                 htmlEl.removeAttribute('data-theme');
                 toggleBtn.textContent = '🌙';
+                localStorage.setItem('theme', 'light');
             } else {
                 htmlEl.setAttribute('data-theme', 'dark');
                 toggleBtn.textContent = '☀️';
+                localStorage.setItem('theme', 'dark');
             }
         });
     }
+
+    // On page load, set theme from localStorage if exists
+    window.addEventListener('DOMContentLoaded', () => {
+        const savedTheme = localStorage.getItem('theme');
+        if(savedTheme === 'dark'){
+            htmlEl.setAttribute('data-theme', 'dark');
+            toggleBtn.textContent = '☀️';
+        } else {
+            htmlEl.removeAttribute('data-theme');
+            toggleBtn.textContent = '🌙';
+        }
+    });
 </script>
 
 </body>

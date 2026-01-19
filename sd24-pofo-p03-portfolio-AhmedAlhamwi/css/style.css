@@ -1,3 +1,24 @@
+:root {
+    --background: #0a0a0a; /* Dark background */
+    --foreground: #ededed; /* Light foreground */
+    --primary-bg: linear-gradient(to right, #dc2626, #b91c1c, #7f1d1d); /* Red gradient */
+    --secondary-bg: #1f2937; /* Dark gray */
+    --accent: #3b82f6; /* Blue accent */
+    --text-light: #d1d5db; /* Light gray text */
+    --text-active: #60a5fa; /* Active blue text */
+}
+
+/* Light mode variables */
+[data-theme="light"] {
+    --background: #f8fafc; /* Light background */
+    --foreground: #1e293b; /* Dark foreground */
+    --primary-bg: linear-gradient(to right, #fecaca, #fca5a5, #f87171); /* Light red gradient */
+    --secondary-bg: #e2e8f0; /* Light gray */
+    --accent: #1d4ed8; /* Dark blue accent */
+    --text-light: #475569; /* Dark gray text */
+    --text-active: #1d4ed8; /* Dark blue text */
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,11 +26,13 @@
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Galada', cursive; /* Apply Galada font to all headings */
+    font-family: 'Galada', cursive;
+    color: var(--text-active); /* Blue for headings */
 }
 
 p {
-    font-family: 'Great Vibes', cursive; /* Apply Great Vibes font to all paragraphs */
+    font-family: 'Great Vibes', cursive;
+    color: var(--text-light); /* Light gray for paragraphs */
 }
 
 html, body {
@@ -17,13 +40,8 @@ html, body {
     padding: 0;
     width: 100%;
     height: 100%;
-    background-color: #F0F4F8; /* Updated background color for a lighter theme */
-}
-
-@media (min-width: 1024px) {
-    html, body {
-        background-color: #0D1321;
-    }
+    background: var(--primary-bg); /* Dark gradient background */
+    color: var(--foreground);
 }
 
 @keyframes fadeIn {
@@ -52,8 +70,8 @@ html, body {
     gap: 20px;
     padding: 20px;
     font-family: Arial, sans-serif;
-    background-color: #848FA5;
-    color: #0D1321;
+    background: var(--background); /* Dark background */
+    color: var(--foreground);
     min-height: 100%;
     width: 100%;
 }
@@ -63,8 +81,8 @@ html, body {
     grid-area: head;
     display: flex;
     align-items: center;
-    background-color: #1D2D44;
-    color: #fff;
+    background: var(--primary-bg); /* Gradient background */
+    color: var(--foreground);
     padding: 20px;
     border-radius: 5px;
     width: 100%;
@@ -81,20 +99,24 @@ html, body {
 .navigation {
     animation: slideIn 1s ease-out 0.5s backwards;
     grid-area: nav;
-    background-color: #34495E; /* Updated navigation background color */
+    background: var(--secondary-bg); /* Dark gray background */
     padding: 15px;
     border-radius: 5px;
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .navigation ul {
     list-style: none;
     display: flex;
     justify-content: space-around;
+    flex: 1;
 }
 
 .navigation a {
-    color: #fff;
+    color: var(--text-light); /* Light gray text */
     text-decoration: none;
     font-weight: bold;
     padding: 5px 10px;
@@ -102,8 +124,22 @@ html, body {
 }
 
 .navigation a:hover {
-    background-color: #9E0031;
+    color: var(--text-active); /* Blue on hover */
+    background-color: rgba(59, 130, 246, 0.1); /* Subtle blue background */
     border-radius: 3px;
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: var(--text-light);
+    transition: color 0.3s ease;
+}
+
+.theme-toggle:hover {
+    color: var(--text-active);
 }
 
 @keyframes slideIn {
@@ -119,9 +155,10 @@ html, body {
 
 section {
     padding: 40px; /* Increased padding for better visibility */
-    background-color: #2980B9; /* Updated section background color */
+    background: var(--secondary-bg); /* Dark gray background */
+    color: var(--text-light); /* Light gray text */
     border-radius: 5px;
-    box-shadow: 0 0 15px rgba(13, 19, 33, 0.2);
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.2); /* Blue shadow */
     width: 100%;
 }
 
@@ -170,8 +207,8 @@ section {
 }
 .footer {
     grid-area: foot;
-    background-color: #1D2D44;
-    color: #fff;
+    background: var(--secondary-bg); /* Dark gray background */
+    color: var(--text-light); /* Light gray text */
     text-align: center;
     padding: 20px;
     border-radius: 5px;
@@ -190,7 +227,7 @@ section {
             "foot foot foot foot";
         max-width: 100%;
         margin: 0;
-        background-color: #0D1321;
+        background: var(--background); /* Dark background */
     }
 
     section {
@@ -213,10 +250,10 @@ section {
     .my-picture {
         width: 250px;
         height: 250px;
-        border: 8px solid #9E0031;
+        border: 8px solid var(--accent); /* Blue accent border */
     }
 
     h1, h2 {
-        color: #E74C3C; /* Updated header color for better contrast */
+        color: var(--text-active); /* Blue for headings */
     }
 }

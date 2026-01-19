@@ -1,0 +1,4 @@
+- [x] Add Bootstrap CDN to index.html for elements like cards
+- [x] Update style.css with dark theme colors (purples, reds, blacks for backgrounds; blues, grays for text), no white sections, ensure readability
+- [x] Add CSS variables adapted for dark theme
+- [ ] Test the updated styling

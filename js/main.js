@@ -1,23 +1,32 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const toggleButton = document.getElementById('theme-toggle');
-  if (!toggleButton) return;
+  // Theme toggle functionality
+  const toggleBtn = document.getElementById('theme-toggle');
+  const htmlEl = document.documentElement;
 
-  const currentTheme = localStorage.getItem('theme') || 'light';
-  document.documentElement.setAttribute('data-theme', currentTheme);
-  toggleButton.textContent = currentTheme === 'dark' ? '☀️' : '🌙';
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', () => {
+      const isDark = htmlEl.getAttribute('data-theme') === 'dark';
+      if (isDark) {
+        htmlEl.removeAttribute('data-theme');
+        toggleBtn.textContent = '🌙';
+        localStorage.setItem('theme', 'light');
+      } else {
+        htmlEl.setAttribute('data-theme', 'dark');
+        toggleBtn.textContent = '☀️';
+        localStorage.setItem('theme', 'dark');
+      }
+    });
+  }
 
-  toggleButton.addEventListener('click', () => {
-    let theme = document.documentElement.getAttribute('data-theme');
-    if (theme === 'light') {
-      document.documentElement.setAttribute('data-theme', 'dark');
-      toggleButton.textContent = '☀️';
-      localStorage.setItem('theme', 'dark');
-    } else {
-      document.documentElement.setAttribute('data-theme', 'light');
-      toggleButton.textContent = '🌙';
-      localStorage.setItem('theme', 'light');
-    }
-  });
+  // On page load, set theme from localStorage if exists
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'dark') {
+    htmlEl.setAttribute('data-theme', 'dark');
+    toggleBtn.textContent = '☀️';
+  } else {
+    htmlEl.removeAttribute('data-theme');
+    toggleBtn.textContent = '🌙';
+  }
 
   // Contact form validation and submission
   const contactForm = document.getElementById('contactForm');

@@ -31,7 +31,7 @@
                     <a class="nav-link" href="#contact">Contact</a>
                 </li>
                 <li class="nav-item">
-                    <button id="theme-toggle" class="btn btn-outline-light ms-3">🌙</button>
+                    <button id="theme-toggle" class="theme-toggle btn btn-outline-light ms-3">🌙</button>
                 </li>
             </ul>
         </div>
@@ -39,10 +39,12 @@
 </nav>
 
 
-    <header class="bg-primary text-white text-center py-5">
+    <header class="hero">
         <div class="container">
-            <h1>Welkom to My Portofolio-website</h1>
-            <p class="lead">Discover my skills, experiences, and achievements on this page.</p>
+            <div class="hero-content">
+                <h1>Welkom to My Portofolio-website</h1>
+                <p>Discover my skills, experiences, and achievements on this page.</p>
+            </div>
         </div>
     </header>
 
@@ -237,38 +239,6 @@
         </div>
     </footer>
 <script src="js/main.js"></script>
-<script>
-    // Enhanced theme toggle script to fix toggle issue
-    const toggleBtn = document.getElementById('theme-toggle');
-    const htmlEl = document.documentElement;
-
-    if(toggleBtn) {
-        toggleBtn.addEventListener('click', () => {
-            const isDark = htmlEl.getAttribute('data-theme') === 'dark';
-            if(isDark){
-                htmlEl.removeAttribute('data-theme');
-                toggleBtn.textContent = '🌙';
-                localStorage.setItem('theme', 'light');
-            } else {
-                htmlEl.setAttribute('data-theme', 'dark');
-                toggleBtn.textContent = '☀️';
-                localStorage.setItem('theme', 'dark');
-            }
-        });
-    }
-
-    // On page load, set theme from localStorage if exists
-    window.addEventListener('DOMContentLoaded', () => {
-        const savedTheme = localStorage.getItem('theme');
-        if(savedTheme === 'dark'){
-            htmlEl.setAttribute('data-theme', 'dark');
-            toggleBtn.textContent = '☀️';
-        } else {
-            htmlEl.removeAttribute('data-theme');
-            toggleBtn.textContent = '🌙';
-        }
-    });
-</script>
 
 </body>
 </html>

@@ -1,11 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@400&family=Playfair+Display+SC:wght@400;700&display=swap');
+
 :root {
-    --background: #0a0a0a; /* Dark background */
-    --foreground: #ededed; /* Light foreground */
-    --primary-bg: linear-gradient(to right, #dc2626, #b91c1c, #7f1d1d); /* Red gradient */
-    --secondary-bg: #1f2937; /* Dark gray */
-    --accent: #3b82f6; /* Blue accent */
-    --text-light: #d1d5db; /* Light gray text */
-    --text-active: #60a5fa; /* Active blue text */
+    --body-bg: linear-gradient(to bottom, #0B0F1A, #0E1424, #070A13);
+    --header-bg: linear-gradient(to right, #7F5AF0, #5EEAD4, #0B0F1A); /* Shadow purple influence */
+    --footer-bg: linear-gradient(to bottom, #070A13, #05070E);
+    --section-bg: rgba(11, 15, 26, 0.8); /* Subtle translucent dark */
+    --text-primary: #E6E9F0;
+    --text-secondary: #B5B9C9;
+    --text-muted: #7C8096;
+    --accent: #7F5AF0; /* Shadow purple */
+    --highlight: #5EEAD4; /* Ethereal blue */
+    --divider: linear-gradient(to right, transparent, #7F5AF0, transparent);
 }
 
 /* Light mode variables */
@@ -26,13 +31,24 @@
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Galada', cursive;
-    color: var(--text-active); /* Blue for headings */
+    font-family: 'Cinzel', serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-primary);
 }
 
-p {
-    font-family: 'Great Vibes', cursive;
-    color: var(--text-light); /* Light gray for paragraphs */
+p, li, span {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    color: var(--text-secondary);
+}
+
+.accent-text {
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--accent);
 }
 
 html, body {
@@ -40,8 +56,8 @@ html, body {
     padding: 0;
     width: 100%;
     height: 100%;
-    background: var(--primary-bg); /* Dark gradient background */
-    color: var(--foreground);
+    background: var(--body-bg);
+    color: var(--text-primary);
 }
 
 @keyframes fadeIn {
@@ -69,9 +85,9 @@ html, body {
         "foot";
     gap: 20px;
     padding: 20px;
-    font-family: Arial, sans-serif;
-    background: var(--background); /* Dark background */
-    color: var(--foreground);
+    font-family: 'Inter', sans-serif;
+    background: transparent;
+    color: var(--text-primary);
     min-height: 100%;
     width: 100%;
 }
@@ -99,13 +115,14 @@ html, body {
 .navigation {
     animation: slideIn 1s ease-out 0.5s backwards;
     grid-area: nav;
-    background: var(--secondary-bg); /* Dark gray background */
+    background: var(--section-bg);
     padding: 15px;
     border-radius: 5px;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border: 1px solid var(--accent);
 }
 
 .navigation ul {
@@ -116,30 +133,36 @@ html, body {
 }
 
 .navigation a {
-    color: var(--text-light); /* Light gray text */
+    color: var(--text-secondary);
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
     padding: 5px 10px;
     transition: all 0.3s ease;
 }
 
 .navigation a:hover {
-    color: var(--text-active); /* Blue on hover */
-    background-color: rgba(59, 130, 246, 0.1); /* Subtle blue background */
+    color: var(--highlight);
+    background: linear-gradient(45deg, var(--accent), var(--highlight));
     border-radius: 3px;
+    box-shadow: 0 0 10px rgba(127, 90, 240, 0.5);
 }
 
 .theme-toggle {
-    background: none;
+    background: linear-gradient(45deg, var(--accent), var(--highlight));
     border: none;
     font-size: 1.5em;
     cursor: pointer;
-    color: var(--text-light);
-    transition: color 0.3s ease;
+    color: var(--text-primary);
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
 }
 
 .theme-toggle:hover {
-    color: var(--text-active);
+    box-shadow: 0 0 15px rgba(127, 90, 240, 0.7);
+    transform: scale(1.05);
 }
 
 @keyframes slideIn {
@@ -178,7 +201,8 @@ section {
     background-position: center;
     border-radius: 50%;
     margin: 20px 0;
-    border: 5px solid #2980B9; /* Updated border color for the profile picture */
+    border: 5px solid var(--highlight);
+    box-shadow: 0 0 20px rgba(94, 234, 212, 0.5);
     animation: scaleIn 1.5s ease-out 1s backwards;
 }
 
@@ -207,11 +231,12 @@ section {
 }
 .footer {
     grid-area: foot;
-    background: var(--secondary-bg); /* Dark gray background */
-    color: var(--text-light); /* Light gray text */
+    background: var(--footer-bg);
+    color: var(--text-muted);
     text-align: center;
     padding: 20px;
     border-radius: 5px;
+    border-top: 1px solid var(--accent);
     width: 100%;
 }
 
@@ -227,7 +252,7 @@ section {
             "foot foot foot foot";
         max-width: 100%;
         margin: 0;
-        background: var(--background); /* Dark background */
+        background: var(--body-bg);
     }
 
     section {
@@ -236,6 +261,7 @@ section {
 
     section:hover {
         transform: translateY(-5px);
+        box-shadow: 0 0 30px rgba(127, 90, 240, 0.5);
     }
 
     .navigation ul {
@@ -250,10 +276,11 @@ section {
     .my-picture {
         width: 250px;
         height: 250px;
-        border: 8px solid var(--accent); /* Blue accent border */
+        border: 8px solid var(--highlight);
+        box-shadow: 0 0 30px rgba(94, 234, 212, 0.7);
     }
 
     h1, h2 {
-        color: var(--text-active); /* Blue for headings */
+        color: var(--text-primary);
     }
 }

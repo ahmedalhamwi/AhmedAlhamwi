@@ -1,37 +1,37 @@
 /* Solo Leveling Theme CSS with Light and Dark Mode Support */
 
-/* Light Theme Colors */
+/* Light Theme Colors - MSI Dark Gray */
 :root {
-    --primary-color: linear-gradient(135deg, #4b0082, #7a1fa2, #ba68c8);
-    --secondary-color: linear-gradient(135deg, #7a1fa2, #a85fbf, #ba68c8);
-    --accent-color: linear-gradient(135deg, #ba68c8, #d39ec4, #c28add);
-    --light-purple: #ba68c8;
-    --dark-purple: #4b0082;
-    --text-color: #1a0033;
-    --text-secondary: #311b92;
-    --bg-color: linear-gradient(135deg, #e5d1ff, #f0e6ff);
-    --bg-alt: linear-gradient(135deg, #f3eaff, #f7f1ff);
-    --border-color: #7a1fa2;
-    --shadow: rgba(122, 31, 162, 0.3);
-    --gradient: linear-gradient(135deg, #4b0082, #7a1fa2, #ba68c8);
+    --primary-color: linear-gradient(135deg, #cc0000, #ff0000, #990000);
+    --secondary-color: linear-gradient(135deg, #ff0000, #cc0000, #990000);
+    --accent-color: linear-gradient(135deg, #ff0000, #cc0000, #800000);
+    --light-red: #ff0000;
+    --dark-red: #cc0000;
+    --text-color: #000000;
+    --text-secondary: #333333;
+    --bg-color: linear-gradient(135deg, #2a2a2a, #333333);
+    --bg-alt: linear-gradient(135deg, #333333, #404040);
+    --border-color: #ff0000;
+    --shadow: rgba(204, 0, 0, 0.3);
+    --gradient: linear-gradient(135deg, #cc0000, #ff0000, #990000);
     --font-primary: 'Poppins', sans-serif;
     --font-secondary: 'Montserrat', sans-serif;
 }
 
-/* Dark Theme Colors */
+/* Dark Theme Colors - MSI Black */
 [data-theme="dark"] {
-    --primary-color: #1a0033;
-    --secondary-color: #4b0082;
-    --accent-color: #7a1fa2;
-    --light-purple: #ba68c8;
-    --dark-purple: #311b92;
+    --primary-color: linear-gradient(135deg, #000000, #1a1a1a, #333333);
+    --secondary-color: linear-gradient(135deg, #1a1a1a, #000000, #333333);
+    --accent-color: linear-gradient(135deg, #1a1a1a, #000000, #4d4d4d);
+    --light-red: #ff0000;
+    --dark-red: #cc0000;
     --text-color: #ffffff;
-    --text-secondary: #e1bee7;
-    --bg-color: #0d001a;
-    --bg-alt: #1a0033;
-    --border-color: #7a1fa2;
-    --shadow: rgba(122, 31, 162, 0.3);
-    --gradient: linear-gradient(135deg, #1a0033, #4b0082, #7a1fa2);
+    --text-secondary: #cccccc;
+    --bg-color: linear-gradient(135deg, #000000, #0d0d0d);
+    --bg-alt: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+    --border-color: #ff0000;
+    --shadow: rgba(204, 0, 0, 0.3);
+    --gradient: linear-gradient(135deg, #000000, #1a1a1a, #333333);
     --font-primary: 'Poppins', sans-serif;
     --font-secondary: 'Montserrat', sans-serif;
 }
@@ -101,7 +101,7 @@ body {
     height: 2px;
     bottom: -5px;
     left: 0;
-    background: var(--light-purple);
+    background: var(--light-red);
     transition: width 0.3s ease;
 }
 
@@ -164,7 +164,7 @@ p {
 }
 
 a {
-    color: var(--light-purple);
+    color: var(--light-red);
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -227,7 +227,7 @@ a:hover {
     height: 2px;
     bottom: -5px;
     left: 0;
-    background: var(--light-purple);
+    background: var(--light-red);
     transition: width 0.3s ease;
 }
 
@@ -280,7 +280,7 @@ a:hover {
 .hero-content h1 {
     font-size: 3.5rem;
     margin-bottom: 1rem;
-    background: linear-gradient(45deg, var(--text-color), var(--light-purple));
+    background: linear-gradient(45deg, var(--text-color), var(--light-red));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -360,8 +360,8 @@ a:hover {
     display: inline-block;
     padding: 10px 25px;
     background: transparent;
-    color: var(--light-purple);
-    border: 2px solid var(--light-purple);
+    color: var(--light-red);
+    border: 2px solid var(--light-red);
     border-radius: 20px;
     font-weight: 500;
     transition: all 0.3s ease;
@@ -369,7 +369,7 @@ a:hover {
 }
 
 .btn-secondary:hover {
-    background: var(--light-purple);
+    background: var(--light-red);
     color: var(--text-color);
     transform: translateY(-2px);
 }
@@ -471,7 +471,7 @@ a:hover {
 .video-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 15px 30px var(--shadow);
-    border-color: var(--light-purple);
+    border-color: var(--light-red);
 }
 
 /* Icons in cards */
@@ -498,7 +498,7 @@ a:hover {
 .stat-number {
     font-size: 2.5rem;
     font-weight: 700;
-    color: var(--light-purple);
+    color: var(--light-red);
     margin-bottom: 0.5rem;
 }
 
@@ -562,7 +562,7 @@ a:hover {
 .conversation-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 15px 30px var(--shadow);
-    border-color: var(--light-purple);
+    border-color: var(--light-red);
 }
 
 .example {
@@ -611,7 +611,7 @@ footer {
 }
 
 .footer-section h3 {
-    color: var(--light-purple);
+    color: var(--light-red);
     margin-bottom: 1rem;
 }
 
@@ -634,7 +634,7 @@ footer {
 .footer-section input:focus,
 .footer-section textarea:focus {
     outline: none;
-    border-color: var(--light-purple);
+    border-color: var(--light-red);
     box-shadow: 0 0 10px var(--shadow);
 }
 
@@ -793,7 +793,7 @@ footer {
 .btn-secondary:focus,
 .footer-section input:focus,
 .footer-section textarea:focus {
-    outline: 2px solid var(--light-purple);
+    outline: 2px solid var(--light-red);
     outline-offset: 2px;
 }
 

@@ -1,19 +1,19 @@
 /* Solo Leveling Theme CSS with Light and Dark Mode Support */
 
-/* Light Theme Colors - MSI Dark Gray */
+/* Light Theme Colors - MSI Dark Gray with Blue and Purple */
 :root {
-    --primary-color: linear-gradient(135deg, #cc0000, #ff0000, #990000);
-    --secondary-color: linear-gradient(135deg, #ff0000, #cc0000, #990000);
-    --accent-color: linear-gradient(135deg, #ff0000, #cc0000, #800000);
+    --primary-color: linear-gradient(135deg, #cc0000, #ff0000, #990000, #000080, #4b0082);
+    --secondary-color: linear-gradient(135deg, #ff0000, #cc0000, #990000, #000080, #4b0082);
+    --accent-color: linear-gradient(135deg, #ff0000, #cc0000, #800000, #000080, #4b0082);
     --light-red: #ff0000;
     --dark-red: #cc0000;
     --text-color: #000000;
-    --text-secondary: #333333;
+    --text-secondary: #807878;
     --bg-color: linear-gradient(135deg, #2a2a2a, #333333);
     --bg-alt: linear-gradient(135deg, #333333, #404040);
     --border-color: #ff0000;
     --shadow: rgba(204, 0, 0, 0.3);
-    --gradient: linear-gradient(135deg, #cc0000, #ff0000, #990000);
+    --gradient: linear-gradient(135deg, #cc0000, #ff0000, #990000, #000080, #4b0082);
     --font-primary: 'Poppins', sans-serif;
     --font-secondary: 'Montserrat', sans-serif;
 }
@@ -151,6 +151,10 @@ h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-secondary);
     font-weight: 600;
     margin-bottom: 1rem;
+    background: linear-gradient(45deg, #ffffff, var(--light-red));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 h1 { font-size: 2.5rem; }

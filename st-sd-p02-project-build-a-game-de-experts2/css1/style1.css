@@ -1,72 +1,498 @@
-* {
+/* ============================================
+   GAME ISLAND – Main Stylesheet
+   ============================================ */
+
+/* --- Reset & Base ---- */
+*, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    background: linear-gradient(135deg, #1a1a2e, #16213e);
-    min-height: 100vh;
-    font-family: 'Poppins', sans-serif;
-    color: white;
+:root {
+    --bg:           #06061a;
+    --bg-card:      #0d0d2b;
+    --neon-ttt:     #ff4d4d;   /* Tic-Tac-Toe — red    */
+    --neon-bs:      #00d4ff;   /* Battleship   — cyan   */
+    --neon-chess:   #ffd700;   /* Chess        — gold   */
+    --text:         #e8e8f8;
+    --text-dim:     #8888aa;
+    --font-display: 'Orbitron', sans-serif;
+    --font-body:    'Poppins', sans-serif;
+    --radius:       16px;
+    --transition:   0.35s ease;
 }
+
+html { scroll-behavior: smooth; }
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* ----------------------------------------
+   Animated background: CSS grid + stars
+   ---------------------------------------- */
+
+/* Perspective grid floor */
+.bg-grid {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    background-image:
+        linear-gradient(rgba(0, 180, 255, 0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 180, 255, 0.06) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+}
+
+/* Twinkling stars */
+.bg-stars {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    background:
+        radial-gradient(1px 1px at 10%  15%, rgba(255,255,255,0.7) 0%, transparent 100%),
+        radial-gradient(1px 1px at 30%  70%, rgba(255,255,255,0.5) 0%, transparent 100%),
+        radial-gradient(1px 1px at 50%  30%, rgba(255,255,255,0.8) 0%, transparent 100%),
+        radial-gradient(1px 1px at 70%  55%, rgba(255,255,255,0.6) 0%, transparent 100%),
+        radial-gradient(1px 1px at 85%  20%, rgba(255,255,255,0.7) 0%, transparent 100%),
+        radial-gradient(1px 1px at 20%  90%, rgba(255,255,255,0.4) 0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 60%  80%, rgba(255,255,255,0.6) 0%, transparent 100%),
+        radial-gradient(1px 1px at 90%  65%, rgba(255,255,255,0.5) 0%, transparent 100%),
+        radial-gradient(1px 1px at 45%  50%, rgba(255,255,255,0.3) 0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 75%  10%, rgba(255,255,255,0.8) 0%, transparent 100%);
+    pointer-events: none;
+    animation: twinkle 6s ease-in-out infinite alternate;
+}
+
+@keyframes twinkle {
+    from { opacity: 0.6; }
+    to   { opacity: 1;   }
+}
+
+/* ----------------------------------------
+   Header / Hero
+   ---------------------------------------- */
 
 header {
+    position: relative;
+    z-index: 10;
+    padding: 80px 20px 60px;
     text-align: center;
-    padding: 2rem;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
 }
 
-h1 {
-    font-size: 3rem;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-main {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    padding: 3rem;
-    max-width: 1200px;
+.header-content {
+    max-width: 800px;
     margin: 0 auto;
 }
 
+/* Floating island emoji */
+.island-icon {
+    font-size: 4.5rem;
+    display: block;
+    margin-bottom: 1rem;
+    animation: float 3.5s ease-in-out infinite;
+    filter: drop-shadow(0 0 20px rgba(0, 212, 255, 0.6));
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0);   }
+    50%       { transform: translateY(-14px); }
+}
+
+/* Glitch title */
+.glitch-text {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 8vw, 5.5rem);
+    font-weight: 900;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: #fff;
+    text-shadow:
+        0 0 10px rgba(0, 212, 255, 0.8),
+        0 0 30px rgba(0, 212, 255, 0.5),
+        0 0 60px rgba(0, 212, 255, 0.3);
+    position: relative;
+    display: inline-block;
+    animation: neon-pulse 2.5s ease-in-out infinite alternate;
+}
+
+.glitch-text::before,
+.glitch-text::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    letter-spacing: inherit;
+}
+
+.glitch-text::before {
+    color: #ff00ff;
+    clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
+    transform: translate(-3px, -2px);
+    animation: glitch-top 4s infinite linear;
+    opacity: 0.7;
+}
+
+.glitch-text::after {
+    color: #00f5ff;
+    clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
+    transform: translate(3px, 2px);
+    animation: glitch-bot 4s infinite linear;
+    opacity: 0.7;
+}
+
+@keyframes neon-pulse {
+    from { text-shadow: 0 0 10px rgba(0,212,255,0.8), 0 0 30px rgba(0,212,255,0.5); }
+    to   { text-shadow: 0 0 20px rgba(0,212,255,1),   0 0 60px rgba(0,212,255,0.8), 0 0 100px rgba(0,212,255,0.4); }
+}
+
+@keyframes glitch-top {
+    0%, 85%         { transform: translate(-3px, -2px); opacity: 0; }
+    86%, 90%        { transform: translate(-6px, -2px); opacity: 0.7; }
+    91%, 95%        { transform: translate(3px,  -2px); opacity: 0.7; }
+    96%, 100%       { transform: translate(-3px, -2px); opacity: 0; }
+}
+
+@keyframes glitch-bot {
+    0%, 85%         { transform: translate(3px, 2px);  opacity: 0; }
+    86%, 90%        { transform: translate(6px, 2px);  opacity: 0.7; }
+    91%, 95%        { transform: translate(-3px, 2px); opacity: 0.7; }
+    96%, 100%       { transform: translate(3px, 2px);  opacity: 0; }
+}
+
+/* Subtitle */
+.subtitle {
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    color: var(--text-dim);
+    letter-spacing: 1px;
+    margin-top: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Header stats row */
+.header-stats {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(0, 212, 255, 0.2);
+    border-radius: 50px;
+    padding: 8px 24px;
+    font-size: 0.8rem;
+    color: var(--text-dim);
+    backdrop-filter: blur(8px);
+}
+
+.hstat i { font-style: normal; }
+
+.hstat-divider {
+    color: rgba(0, 212, 255, 0.3);
+    font-size: 1rem;
+}
+
+/* ----------------------------------------
+   Main content
+   ---------------------------------------- */
+
+main {
+    position: relative;
+    z-index: 10;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px 80px;
+}
+
+.section-label {
+    text-align: center;
+    font-family: var(--font-display);
+    font-size: 0.75rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: rgba(0, 212, 255, 0.6);
+    margin-bottom: 2.5rem;
+}
+
+/* ----------------------------------------
+   Games Grid
+   ---------------------------------------- */
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 28px;
+}
+
+/* ----------------------------------------
+   Game Card
+   ---------------------------------------- */
+
 .game-card {
     position: relative;
-    height: 400px;
-    border-radius: 15px;
+    border-radius: var(--radius);
+    background: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.06);
     overflow: hidden;
-    transition: transform 0.3s ease;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+    cursor: pointer;
 }
+
+/* Per-game neon accent */
+.game-card.tictactoe { --accent: var(--neon-ttt);   }
+.game-card.battleship { --accent: var(--neon-bs);    }
+.game-card.chess      { --accent: var(--neon-chess); }
 
 .game-card:hover {
     transform: translateY(-10px);
+    border-color: var(--accent);
+    box-shadow:
+        0 0 20px color-mix(in srgb, var(--accent) 30%, transparent),
+        0 25px 50px rgba(0, 0, 0, 0.5);
 }
 
-.game-card img {
+/* Glowing halo behind card */
+.card-glow {
+    position: absolute;
+    inset: -2px;
+    border-radius: calc(var(--radius) + 2px);
+    background: radial-gradient(ellipse at top left, color-mix(in srgb, var(--accent) 25%, transparent), transparent 65%);
+    opacity: 0;
+    transition: opacity var(--transition);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.game-card:hover .card-glow { opacity: 1; }
+
+/* Image area */
+.card-img-wrap {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.card-img-wrap img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.5s ease;
+    display: block;
 }
 
-.game-card a {
+.game-card:hover .card-img-wrap img {
+    transform: scale(1.08);
+}
+
+/* Gradient overlay on image */
+.card-img-overlay {
     position: absolute;
-    bottom: 0;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        transparent 40%,
+        color-mix(in srgb, var(--bg-card) 80%, transparent) 80%,
+        var(--bg-card) 100%
+    );
+    pointer-events: none;
+}
+
+/* Neon top border that reveals on hover */
+.game-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
     left: 0;
     right: 0;
-    padding: 1.5rem;
-    background: rgba(0, 0, 0, 0.7);
-    color: white;
-    text-decoration: none;
-    font-size: 1.2rem;
-    text-align: center;
-    transition: background 0.3s ease;
+    height: 3px;
+    background: var(--accent);
+    box-shadow: 0 0 12px var(--accent), 0 0 30px var(--accent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+    z-index: 10;
 }
 
-.game-card a:hover {
-    background: rgba(0, 0, 0, 0.9);
+.game-card:hover::before { transform: scaleX(1); }
+
+/* Card body */
+.card-body {
+    position: relative;
+    z-index: 1;
+    padding: 20px 24px 24px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+/* Meta row (players + difficulty) */
+.card-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.player-badge {
+    font-size: 0.7rem;
+    color: var(--text-dim);
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 3px 10px;
+    border-radius: 20px;
+}
+
+.difficulty-badge {
+    font-size: 0.68rem;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.difficulty-badge.easy   { background: rgba(76,175,80,0.2);  border: 1px solid rgba(76,175,80,0.5);  color: #81c784; }
+.difficulty-badge.medium { background: rgba(255,152,0,0.2);  border: 1px solid rgba(255,152,0,0.5);  color: #ffb74d; }
+.difficulty-badge.hard   { background: rgba(244,67,54,0.2);  border: 1px solid rgba(244,67,54,0.5);  color: #ef9a9a; }
+
+/* Game title */
+.game-title {
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    text-shadow: 0 0 15px color-mix(in srgb, var(--accent) 60%, transparent);
+    transition: text-shadow var(--transition);
+}
+
+.game-card:hover .game-title {
+    text-shadow: 0 0 25px var(--accent), 0 0 50px color-mix(in srgb, var(--accent) 40%, transparent);
+}
+
+/* Game description */
+.game-desc {
+    font-size: 0.85rem;
+    color: var(--text-dim);
+    margin-bottom: 20px;
+    flex: 1;
+    line-height: 1.55;
+}
+
+/* Play button */
+.play-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 28px;
+    background: transparent;
+    color: var(--accent);
+    border: 2px solid var(--accent);
+    border-radius: 50px;
+    font-family: var(--font-display);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    align-self: flex-start;
+}
+
+.play-btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--accent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+    z-index: 0;
+}
+
+.play-btn:hover::before { transform: scaleX(1); }
+
+.play-btn span,
+.play-btn .btn-arrow {
+    position: relative;
+    z-index: 1;
+}
+
+.play-btn:hover {
+    color: var(--bg);
+    box-shadow: 0 0 20px var(--accent), 0 0 50px color-mix(in srgb, var(--accent) 40%, transparent);
+    transform: translateY(-2px);
+}
+
+.btn-arrow {
+    font-size: 1.1rem;
+    transition: transform 0.3s ease;
+}
+
+.play-btn:hover .btn-arrow { transform: translateX(5px); }
+
+/* ----------------------------------------
+   Footer
+   ---------------------------------------- */
+
+footer {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    padding: 24px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    font-size: 0.82rem;
+    color: var(--text-dim);
+}
+
+footer strong { color: rgba(0, 212, 255, 0.8); }
+
+/* ----------------------------------------
+   Responsive
+   ---------------------------------------- */
+
+@media (max-width: 768px) {
+    header { padding: 70px 20px 40px; }
+
+    .island-icon { font-size: 3.5rem; }
+
+    .games-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .header-stats {
+        flex-direction: column;
+        gap: 6px;
+        border-radius: 12px;
+        padding: 12px 20px;
+    }
+
+    .hstat-divider { display: none; }
+
+    .card-img-wrap { height: 200px; }
+}
+
+@media (max-width: 480px) {
+    main { padding: 0 16px 60px; }
+
+    .play-btn { align-self: stretch; justify-content: center; }
 }

@@ -3,27 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page Game Island</title>
-    <link rel="stylesheet" href="/css1/style1.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <title>Game Island – Choose Your Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css1/style1.css">
 </head>
 <body>
+
+    <!-- Animated background layers -->
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="bg-stars" aria-hidden="true"></div>
+
+    <!-- Header / Hero -->
     <header>
-        <h1>Game Island</h1>
+        <div class="header-content">
+            <div class="island-icon" aria-hidden="true">🏝️</div>
+            <h1 class="glitch-text" data-text="GAME ISLAND">GAME ISLAND</h1>
+            <p class="subtitle">Three games. One island. Choose your challenge.</p>
+            <div class="header-stats">
+                <span class="hstat"><i>🎮</i> 3 Games</span>
+                <span class="hstat-divider">|</span>
+                <span class="hstat"><i>👥</i> 1 – 2 Players</span>
+                <span class="hstat-divider">|</span>
+                <span class="hstat"><i>🏆</i> All Skill Levels</span>
+            </div>
+        </div>
     </header>
+
+    <!-- Game cards -->
     <main>
-        <div class="game-card">
-            <img src="XO.jpg" alt="Tic Tac Toe">
-            <a href="boter kaas en eieren/index.html">Tic Tac Toe</a>
-        </div>
-        <div class="game-card">
-            <img src="zeeslag-img.png" alt="Battleship">
-            <a href="ZeeSlag/index.html">Battleship</a>
-        </div>
-        <div class="game-card">
-            <img src="chess-img.png" alt="Chess">
-            <a href="Chess-game/index.html">Chess</a>
+        <p class="section-label">Select a Game to Play</p>
+        <div class="games-grid">
+
+            <!-- Tic Tac Toe -->
+            <div class="game-card tictactoe">
+                <div class="card-glow" aria-hidden="true"></div>
+                <div class="card-img-wrap">
+                    <img src="XO.jpg" alt="Tic Tac Toe screenshot">
+                    <div class="card-img-overlay" aria-hidden="true"></div>
+                </div>
+                <div class="card-body">
+                    <div class="card-meta">
+                        <span class="player-badge">👤 1–2 Players</span>
+                        <span class="difficulty-badge easy">Easy</span>
+                    </div>
+                    <h2 class="game-title">Tic Tac Toe</h2>
+                    <p class="game-desc">Classic X's and O's. Outsmart your opponent and claim 3 in a row to claim victory!</p>
+                    <a href="boter kaas en eieren/index.html" class="play-btn">
+                        Play Now <span class="btn-arrow">→</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Battleship -->
+            <div class="game-card battleship">
+                <div class="card-glow" aria-hidden="true"></div>
+                <div class="card-img-wrap">
+                    <img src="zeeslag-img.png" alt="Battleship screenshot">
+                    <div class="card-img-overlay" aria-hidden="true"></div>
+                </div>
+                <div class="card-body">
+                    <div class="card-meta">
+                        <span class="player-badge">👥 2 Players</span>
+                        <span class="difficulty-badge medium">Medium</span>
+                    </div>
+                    <h2 class="game-title">Battleship</h2>
+                    <p class="game-desc">Deploy your fleet and hunt down enemy ships hiding on the grid. Strategy is your only weapon!</p>
+                    <a href="ZeeSlag/index.html" class="play-btn">
+                        Play Now <span class="btn-arrow">→</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Chess -->
+            <div class="game-card chess">
+                <div class="card-glow" aria-hidden="true"></div>
+                <div class="card-img-wrap">
+                    <img src="chess-img.png" alt="Chess screenshot">
+                    <div class="card-img-overlay" aria-hidden="true"></div>
+                </div>
+                <div class="card-body">
+                    <div class="card-meta">
+                        <span class="player-badge">👤 1–2 Players</span>
+                        <span class="difficulty-badge hard">Hard</span>
+                    </div>
+                    <h2 class="game-title">Chess</h2>
+                    <p class="game-desc">The ultimate strategy game. Play 1v1 or challenge the AI — three difficulty levels await!</p>
+                    <a href="Chess-game/index.html" class="play-btn">
+                        Play Now <span class="btn-arrow">→</span>
+                    </a>
+                </div>
+            </div>
+
         </div>
     </main>
+
+    <footer>
+        <p>Built by <strong>The Experts</strong> — ROC Mondriaan &nbsp;·&nbsp; ICT Software Development</p>
+    </footer>
+
 </body>
 </html>

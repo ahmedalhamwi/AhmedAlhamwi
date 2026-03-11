@@ -107,8 +107,8 @@
 <section class="bg-light py-5" id="projects">
     <div class="container">
         <h2 class="text-center mb-2">Projects</h2>
-        <p class="text-center mb-5">A collection of projects I've built during my ICT studies and personal development.</p>
-        <div class="row row-cols-1 row-cols-md-2 g-4 mb-4">
+        <p class="text-center mb-5">A collection of projects I've built during my ICT studies. Click any card to view the full details, analysis, and documentation.</p>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mb-4">
 
             <!-- Project 1: Higher-Lower Game -->
             <div class="col">
@@ -119,15 +119,17 @@
                     </div>
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title">Project 1: Higher-Lower Game</h5>
-                        <div class="tech-badges mb-2">
+                        <div class="tech-badges mb-3">
                             <span class="badge">HTML5</span>
                             <span class="badge">CSS3</span>
                             <span class="badge">JavaScript</span>
                         </div>
-                        <p class="card-text flex-grow-1">A Higher-Lower Game where the player bets credits and guesses if the next number is higher or lower. Single-player experience with a credit system — win at 3,600 credits or restart when dropping to −2,600.</p>
-                        <a href="st-sd-project-p01-hogerlager-AhmedAlhamwi/Hoger-Lager Project/hoger-lager.html" class="btn btn-primary mt-auto">
-                            <i class="bi bi-play-circle-fill me-1"></i> View Project
-                        </a>
+                        <p class="card-text flex-grow-1">A single-player credit-betting game built with vanilla JavaScript. Guess higher or lower to reach 3,600 credits — or restart from −2,600.</p>
+                        <div class="d-flex gap-2 mt-auto">
+                            <a href="projects/project1.html" class="btn btn-primary flex-fill">
+                                <i class="bi bi-eye-fill me-1"></i> View Details
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -141,20 +143,22 @@
                     </div>
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title">Project 2: Build a New Game</h5>
-                        <div class="tech-badges mb-2">
+                        <div class="tech-badges mb-3">
                             <span class="badge">HTML5</span>
                             <span class="badge">CSS3</span>
                             <span class="badge">JavaScript</span>
                         </div>
-                        <p class="card-text flex-grow-1">A team project featuring a game island with three games. I designed the main page and built a chess game with 1v1 and 1v-Computer modes (adjustable difficulty). Teammates built Tic-Tac-Toe and Battleship.</p>
-                        <a href="st-sd-p02-project-build-a-game-de-experts2/index.html" class="btn btn-primary mt-auto">
-                            <i class="bi bi-play-circle-fill me-1"></i> View Project
-                        </a>
+                        <p class="card-text flex-grow-1">A team game island with 3 browser games. I built the hub page and a full chess game with 1v1 and 1v-Computer modes (3 difficulty levels).</p>
+                        <div class="d-flex gap-2 mt-auto">
+                            <a href="projects/project2.html" class="btn btn-primary flex-fill">
+                                <i class="bi bi-eye-fill me-1"></i> View Details
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Project 3: Review Your Experience – Pro Gamers -->
+            <!-- Project 3: Review Your Experience -->
             <div class="col">
                 <div class="card h-100 project-card border-0">
                     <div class="project-card-header">
@@ -162,180 +166,53 @@
                         <div class="project-badge">Full-Stack</div>
                     </div>
                     <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">Project 3: Review Your Experience – Pro Gamers</h5>
-
-                        <!-- Tech Stack -->
-                        <div class="tech-badges mb-2">
+                        <h5 class="card-title">Project 3: Review Your Experience</h5>
+                        <div class="tech-badges mb-3">
                             <span class="badge">PHP 8</span>
                             <span class="badge">MySQL</span>
                             <span class="badge">Bootstrap 5</span>
-                            <span class="badge">HTML5</span>
-                            <span class="badge">CSS3</span>
                             <span class="badge">PDO</span>
                             <span class="badge">Scrum</span>
-                            <span class="badge">Git</span>
                         </div>
-
-                        <!-- Project Meta Pills -->
-                        <div class="project-meta mb-3">
-                            <span class="meta-pill"><i class="bi bi-people-fill"></i> 2-person team</span>
-                            <span class="meta-pill"><i class="bi bi-kanban-fill"></i> 8 Sprints</span>
-                            <span class="meta-pill"><i class="bi bi-person-badge-fill"></i> 3 User Roles</span>
-                            <span class="meta-pill"><i class="bi bi-mortarboard-fill"></i> ROC Mondriaan</span>
-                        </div>
-
-                        <p class="card-text">A Scrum-driven full-stack web application where gamers can read and write product reviews. Built during Cohort 20, Period 3 (2024–2025). Users browse categories, view product details, submit reviews and like them. Administrators have a full CRUD panel with image management.</p>
-
-                        <!-- Key Features -->
-                        <ul class="feature-list mb-3">
-                            <li><i class="bi bi-check-circle-fill"></i> Dynamic category & product pages populated from MySQL</li>
-                            <li><i class="bi bi-check-circle-fill"></i> User registration, login & personal profile page</li>
-                            <li><i class="bi bi-check-circle-fill"></i> Review form with star rating & like-button per review</li>
-                            <li><i class="bi bi-check-circle-fill"></i> Admin panel – full CRUD + image upload/delete</li>
-                            <li><i class="bi bi-check-circle-fill"></i> PDO for secure database access (no SQL injection)</li>
-                            <li><i class="bi bi-check-circle-fill"></i> Full test plan, test-report & improvement proposal</li>
-                            <li><i class="bi bi-check-circle-fill"></i> Scrum artefacts: backlog, sprint reviews, retrospectives</li>
-                        </ul>
-
-                        <!-- Full Analysis Accordion -->
-                        <div class="accordion accordion-flush proj-accordion mb-3" id="proj3Accordion">
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#proj3Details"
-                                            aria-expanded="false" aria-controls="proj3Details">
-                                        <i class="bi bi-journal-text me-2"></i> Full Project Analysis Report
-                                    </button>
-                                </h2>
-                                <div id="proj3Details" class="accordion-collapse collapse">
-                                    <div class="accordion-body">
-
-                                        <!-- Vision -->
-                                        <div class="analysis-section mb-3">
-                                            <h6 class="section-label"><i class="bi bi-bullseye me-1"></i>Project Vision</h6>
-                                            <p class="small mb-1"><strong>Problem:</strong> No centralised place for gamers to read & write authentic product reviews. Existing platforms are too generic or lack a community-driven UI.</p>
-                                            <p class="small mb-0"><strong>Solution:</strong> A responsive web-app where users browse categories, view products, read/write reviews, and like reviews. Administrators manage all content via CRUD.</p>
-                                        </div>
-
-                                        <!-- Data Model -->
-                                        <div class="analysis-section mb-3">
-                                            <h6 class="section-label"><i class="bi bi-diagram-3 me-1"></i>Data Model</h6>
-                                            <div class="table-responsive">
-                                                <table class="table table-sm proj-table">
-                                                    <thead>
-                                                        <tr><th>Table</th><th>Key Fields</th><th>Relations</th></tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr><td>users</td><td>username, email, password_hash, role</td><td>→ reviews, likes</td></tr>
-                                                        <tr><td>categories</td><td>name, slug</td><td>→ products</td></tr>
-                                                        <tr><td>products</td><td>title, description, price, image_path</td><td>→ reviews</td></tr>
-                                                        <tr><td>reviews</td><td>rating (1–5), comment, created_at</td><td>→ likes</td></tr>
-                                                        <tr><td>likes</td><td>review_id (FK), user_id (FK)</td><td>M-1 reviews/users</td></tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-
-                                        <!-- Sprint Overview -->
-                                        <div class="analysis-section mb-3">
-                                            <h6 class="section-label"><i class="bi bi-kanban me-1"></i>Sprint Overview</h6>
-                                            <div class="table-responsive">
-                                                <table class="table table-sm proj-table">
-                                                    <thead>
-                                                        <tr><th>#</th><th>Focus</th><th>Points</th></tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr><td>1</td><td>Setup, static pages, need-analysis & wireframes</td><td>8</td></tr>
-                                                        <tr><td>2</td><td>Category pages & PHP routing</td><td>10</td></tr>
-                                                        <tr><td>3</td><td>DB-driven product list & review form UI</td><td>12</td></tr>
-                                                        <tr><td>4</td><td>Store reviews + like-button</td><td>14</td></tr>
-                                                        <tr><td>5</td><td>User auth – register & login</td><td>12</td></tr>
-                                                        <tr><td>6</td><td>Profile edit & password reset</td><td>10</td></tr>
-                                                        <tr><td>7</td><td>Admin CRUD + image upload</td><td>12</td></tr>
-                                                        <tr><td>8</td><td>Testing, demo & test-report</td><td>8</td></tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-
-                                        <!-- Evaluation -->
-                                        <div class="analysis-section mb-3">
-                                            <h6 class="section-label"><i class="bi bi-bar-chart me-1"></i>Evaluation</h6>
-                                            <div class="row g-2">
-                                                <div class="col-md-6">
-                                                    <div class="analysis-box strengths-box">
-                                                        <strong><i class="bi bi-trophy-fill me-1"></i>Strengths</strong>
-                                                        <ul class="mt-2 ps-3 mb-0">
-                                                            <li>Clean HTML/CSS vs PHP separation</li>
-                                                            <li>PDO prevents SQL injection</li>
-                                                            <li>Responsive Bootstrap layout</li>
-                                                            <li>All artefacts delivered on time</li>
-                                                            <li>7 bugs found & fixed before demo</li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="analysis-box improvements-box">
-                                                        <strong><i class="bi bi-lightbulb-fill me-1"></i>Future Improvements</strong>
-                                                        <ul class="mt-2 ps-3 mb-0">
-                                                            <li>Add PHPUnit automated tests</li>
-                                                            <li>Star-rating UI (not numeric)</li>
-                                                            <li>Client-side form validation</li>
-                                                            <li>REST API for mobile integration</li>
-                                                            <li>CI/CD via GitHub Actions</li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Deliverables -->
-                                        <div class="analysis-section">
-                                            <h6 class="section-label"><i class="bi bi-file-earmark-check me-1"></i>Deliverables</h6>
-                                            <div class="deliverables-grid">
-                                                <span class="deliverable-pill"><i class="bi bi-file-text"></i> Need-analysis</span>
-                                                <span class="deliverable-pill"><i class="bi bi-layers"></i> Wireframes</span>
-                                                <span class="deliverable-pill"><i class="bi bi-github"></i> Git repository</span>
-                                                <span class="deliverable-pill"><i class="bi bi-camera"></i> Scrum board photos</span>
-                                                <span class="deliverable-pill"><i class="bi bi-journal"></i> Sprint reviews</span>
-                                                <span class="deliverable-pill"><i class="bi bi-clipboard-check"></i> Test plan & report</span>
-                                                <span class="deliverable-pill"><i class="bi bi-arrow-repeat"></i> Retrospectives</span>
-                                                <span class="deliverable-pill"><i class="bi bi-markdown"></i> User documentation</span>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Action Buttons -->
+                        <p class="card-text flex-grow-1">A Scrum-driven full-stack review platform for gamers — 8 sprints, 3 user roles, admin CRUD panel, full test plan &amp; analysis report.</p>
                         <div class="d-flex gap-2 mt-auto">
+                            <a href="projects/project3.html" class="btn btn-primary flex-fill">
+                                <i class="bi bi-eye-fill me-1"></i> View Details
+                            </a>
                             <a href="https://github.com/ROCMondriaanTIN/sd24-project-p03-review-your-experience-pro-gamers"
-                               class="btn btn-github flex-fill"
-                               target="_blank" rel="noopener noreferrer">
-                                <i class="bi bi-github me-1"></i> GitHub Repo
+                               class="btn btn-github" target="_blank" rel="noopener noreferrer" title="GitHub Repo">
+                                <i class="bi bi-github"></i>
                             </a>
                         </div>
-
                     </div>
                 </div>
             </div>
 
-            <!-- Project 4: Fighting Game in Unity -->
+            <!-- Project 4: The Shadow Monarch's Quest -->
             <div class="col">
                 <div class="card h-100 project-card border-0">
                     <div class="project-card-header">
-                        <img src="img/unity.png" class="card-img-top project-img project-img-contain" alt="Fighting Game in Unity">
+                        <img src="img/unity.png" class="card-img-top project-img project-img-contain" alt="The Shadow Monarch's Quest">
                         <div class="project-badge">Game Dev</div>
                     </div>
                     <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">Project 4: Fighting Game in Unity</h5>
-                        <div class="tech-badges mb-2">
+                        <h5 class="card-title">Project 4: The Shadow Monarch's Quest</h5>
+                        <div class="tech-badges mb-3">
                             <span class="badge">Unity</span>
                             <span class="badge">C#</span>
+                            <span class="badge">Scrum</span>
+                            <span class="badge">787 LoC</span>
                         </div>
-                        <p class="card-text flex-grow-1">A fighting game built in Unity as part of the Game Developer course. Involves animation, character creation, story writing, and C# programming to create an engaging interactive experience.</p>
+                        <p class="card-text flex-grow-1">Two Unity games in one repo — a 3-D Tekken-style fighter (Ahmed) and a 2-D Mario-style platformer (teammates). Full analysis &amp; scorecard included.</p>
+                        <div class="d-flex gap-2 mt-auto">
+                            <a href="projects/project4.html" class="btn btn-primary flex-fill">
+                                <i class="bi bi-eye-fill me-1"></i> View Details
+                            </a>
+                            <a href="https://github.com/ROCMondriaanTIN/sd24-p04-kdl-gp-game-the-shadow-monarch-s"
+                               class="btn btn-github" target="_blank" rel="noopener noreferrer" title="GitHub Repo">
+                                <i class="bi bi-github"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -349,16 +226,18 @@
                     </div>
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title">Project 5: Portfolio Website (Old Version)</h5>
-                        <div class="tech-badges mb-2">
+                        <div class="tech-badges mb-3">
                             <span class="badge">HTML5</span>
                             <span class="badge">CSS3</span>
                             <span class="badge">Bootstrap 5</span>
                             <span class="badge">JavaScript</span>
                         </div>
-                        <p class="card-text flex-grow-1">The previous version of my portfolio — a simpler static website built with basic HTML and CSS. It served as the initial platform to present my work before this responsive, Bootstrap-powered version.</p>
-                        <a href="sd24-pofo-p03-portfolio-AhmedAlhamwi/index.html" class="btn btn-primary mt-auto">
-                            <i class="bi bi-eye-fill me-1"></i> View Project
-                        </a>
+                        <p class="card-text flex-grow-1">The first version of my portfolio — a simpler static site that shows how far my front-end skills have grown since starting at ROC Mondriaan.</p>
+                        <div class="d-flex gap-2 mt-auto">
+                            <a href="projects/project5.html" class="btn btn-primary flex-fill">
+                                <i class="bi bi-eye-fill me-1"></i> View Details
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -1101,3 +1101,261 @@ footer {
     font-size: 1rem;
     margin-bottom: 0.6rem;
 }
+
+/* card subtitle */
+.project-card .card-subtitle {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    background: none !important;
+    -webkit-text-fill-color: var(--text-secondary) !important;
+    font-weight: 400;
+}
+
+/* Priority-coloured deliverable pills */
+.deliverable-pill.priority-critical {
+    background: rgba(204, 0, 0, 0.15);
+    border-color: rgba(204, 0, 0, 0.4);
+    color: #ff6666;
+}
+
+.deliverable-pill.priority-high {
+    background: rgba(255, 152, 0, 0.12);
+    border-color: rgba(255, 152, 0, 0.35);
+    color: #ffb74d;
+}
+
+.deliverable-pill.priority-medium {
+    background: rgba(33, 150, 243, 0.1);
+    border-color: rgba(33, 150, 243, 0.3);
+    color: #64b5f6;
+}
+
+/* ================================================
+   Project Detail Pages
+   ================================================ */
+
+.proj-page-hero {
+    padding: 120px 0 60px;
+    background: var(--gradient);
+    position: relative;
+    overflow: hidden;
+}
+
+.proj-page-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="g" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.08)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.08)"/></pattern></defs><rect width="100" height="100" fill="url(%23g)"/></svg>');
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.proj-page-hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+.proj-page-hero h1 {
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+}
+
+.proj-page-hero .lead {
+    font-size: 1.05rem;
+    color: rgba(255, 255, 255, 0.82);
+    max-width: 760px;
+    background: none !important;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.82) !important;
+}
+
+.proj-page-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #cc0000, #ff0000);
+    color: #fff;
+    padding: 4px 16px;
+    border-radius: 20px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    box-shadow: 0 3px 12px rgba(204, 0, 0, 0.45);
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 0.85rem;
+    margin-bottom: 1.25rem;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    background: none !important;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.65) !important;
+}
+
+.back-link:hover {
+    color: #fff !important;
+    -webkit-text-fill-color: #fff !important;
+}
+
+/* Stat row in project hero */
+.proj-stat-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.proj-stat .stat-number {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--light-red);
+    background: none !important;
+    -webkit-text-fill-color: var(--light-red) !important;
+    line-height: 1;
+}
+
+.proj-stat .stat-label {
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.55);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 2px;
+}
+
+/* Content sections */
+.proj-page-section {
+    padding: 2.5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.proj-page-section:last-child {
+    border-bottom: none;
+}
+
+.proj-page-section-title {
+    font-size: 1.35rem;
+    margin-bottom: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.proj-page-section-title i {
+    color: var(--light-red);
+    background: none !important;
+    -webkit-text-fill-color: var(--light-red) !important;
+    font-size: 1.1rem;
+}
+
+/* KPI cards */
+.kpi-card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 0, 0, 0.12);
+    border-radius: 12px;
+    padding: 1.25rem;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.kpi-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(255, 0, 0, 0.35);
+}
+
+.kpi-card .kpi-value {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--light-red);
+    background: none !important;
+    -webkit-text-fill-color: var(--light-red) !important;
+}
+
+.kpi-card .kpi-label {
+    font-size: 0.7rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 2px;
+    background: none !important;
+    -webkit-text-fill-color: var(--text-secondary) !important;
+}
+
+/* Team cards */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+}
+
+.team-card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 1.25rem;
+    transition: border-color 0.2s ease;
+}
+
+.team-card:hover {
+    border-color: rgba(255, 0, 0, 0.3);
+}
+
+.team-card .team-name {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--text-color);
+    background: none !important;
+    -webkit-text-fill-color: var(--text-color) !important;
+    margin-bottom: 3px;
+}
+
+.team-card .team-role {
+    font-size: 0.75rem;
+    color: #ff6666;
+    background: none !important;
+    -webkit-text-fill-color: #ff6666 !important;
+    margin-bottom: 0.75rem;
+}
+
+.team-card ul {
+    margin: 0;
+    padding-left: 1.1rem;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.team-card ul li {
+    margin-bottom: 3px;
+}
+
+/* CTA section at bottom of project pages */
+.cta-section {
+    background: rgba(255, 0, 0, 0.05);
+    border: 1px solid rgba(255, 0, 0, 0.18);
+    border-radius: 16px;
+    padding: 2.5rem;
+    text-align: center;
+}
+
+.cta-section h4 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Responsive for project pages */
+@media (max-width: 768px) {
+    .proj-page-hero {
+        padding: 100px 0 40px;
+    }
+
+    .proj-page-hero h1 {
+        font-size: 1.75rem;
+    }
+
+    .proj-stat-row {
+        gap: 1.25rem;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+}

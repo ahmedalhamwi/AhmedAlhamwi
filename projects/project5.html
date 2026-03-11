@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Project 5: Portfolio Website (Old Version) – Ahmed Alhamwi</title>
+</head>
+<body>
+
+<nav id="navbar" class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">Portfolio</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="../index.html#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="../index.html#about-me">About Me</a></li>
+                <li class="nav-item"><a class="nav-link active" href="../index.html#projects">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="../index.html#contact">Contact</a></li>
+                <li class="nav-item">
+                    <button id="theme-toggle" class="theme-toggle btn btn-outline-light ms-3">🌙</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero -->
+<header class="proj-page-hero">
+    <div class="container">
+        <a href="../index.html#projects" class="back-link">
+            <i class="bi bi-arrow-left"></i> Back to Projects
+        </a>
+        <div class="proj-page-badge mb-3">Portfolio</div>
+        <h1>Project 5: Portfolio Website (Old Version)</h1>
+        <p class="lead">The first version of my personal portfolio — a static HTML/CSS website that laid the foundation for the current responsive, Bootstrap-powered portfolio you're viewing now.</p>
+        <div class="tech-badges mt-3">
+            <span class="badge">HTML5</span>
+            <span class="badge">CSS3</span>
+            <span class="badge">Bootstrap 5</span>
+            <span class="badge">JavaScript</span>
+        </div>
+        <div class="proj-stat-row mt-4">
+            <div class="proj-stat"><div class="stat-number">1</div><div class="stat-label">Developer</div></div>
+            <div class="proj-stat"><div class="stat-number">4</div><div class="stat-label">Technologies</div></div>
+            <div class="proj-stat"><div class="stat-number">v1→v2</div><div class="stat-label">Evolution</div></div>
+        </div>
+    </div>
+</header>
+
+<main class="py-2">
+    <div class="container">
+
+        <!-- Screenshot -->
+        <div class="proj-page-section">
+            <img src="../img/Portofolio-old-version.png" alt="Old Portfolio Screenshot"
+                 class="img-fluid rounded-3 shadow w-100" style="max-height:420px; object-fit:cover;">
+        </div>
+
+        <!-- Overview -->
+        <div class="proj-page-section">
+            <h3 class="proj-page-section-title"><i class="bi bi-info-circle"></i> Project Overview</h3>
+            <p>Every developer has a first portfolio. This was mine. The old version was built at the beginning of my first year at ROC Mondriaan and served as my initial digital presence — a place to present who I am and what I had worked on at the time.</p>
+            <p>While simple by today's standards, it was an important milestone. It taught me the fundamentals of structuring a real website, applying consistent styling across pages, and thinking about a visitor's experience from the outside.</p>
+        </div>
+
+        <!-- Old vs New Comparison -->
+        <div class="proj-page-section">
+            <h3 class="proj-page-section-title"><i class="bi bi-arrow-left-right"></i> Old vs. Current Version</h3>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="kpi-card text-start h-100" style="border-color:rgba(255,255,255,0.1);">
+                        <h6 class="section-label">Old Version (v1)</h6>
+                        <ul class="feature-list">
+                            <li><i class="bi bi-x-circle" style="color:var(--light-red)"></i> Basic static HTML &amp; CSS — no framework</li>
+                            <li><i class="bi bi-x-circle" style="color:var(--light-red)"></i> Fixed layout — not fully responsive</li>
+                            <li><i class="bi bi-x-circle" style="color:var(--light-red)"></i> No dark/light mode toggle</li>
+                            <li><i class="bi bi-x-circle" style="color:var(--light-red)"></i> Simple project list — no cards or images</li>
+                            <li><i class="bi bi-x-circle" style="color:var(--light-red)"></i> No animations or interactive elements</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Clear structure — Home, About, Contact sections</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Honest representation of skills at the time</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="kpi-card text-start h-100" style="border-color:rgba(255,0,0,0.3);">
+                        <h6 class="section-label">Current Version (v2 — this site)</h6>
+                        <ul class="feature-list">
+                            <li><i class="bi bi-check-circle-fill"></i> Bootstrap 5 — fully responsive on all screen sizes</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Dark / light mode with CSS variables &amp; localStorage</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Animated hero section with gradient theme</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Project cards with tech badges, meta pills &amp; hover effects</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Dedicated project detail pages with full analysis</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Contact form with validation</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Bootstrap Icons throughout the UI</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tech Used -->
+        <div class="proj-page-section">
+            <h3 class="proj-page-section-title"><i class="bi bi-code-slash"></i> Technologies Used</h3>
+            <div class="row g-3">
+                <div class="col-md-3">
+                    <div class="kpi-card text-center">
+                        <img src="../img/html-5.png" alt="HTML5" width="48" class="mb-2">
+                        <div class="kpi-label">HTML5</div>
+                        <p class="mt-1 mb-0" style="font-size:0.75rem;color:var(--text-secondary);">Structure and semantic markup for all pages.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="kpi-card text-center">
+                        <img src="../img/css-3.png" alt="CSS3" width="48" class="mb-2">
+                        <div class="kpi-label">CSS3</div>
+                        <p class="mt-1 mb-0" style="font-size:0.75rem;color:var(--text-secondary);">Styling, layout, colours and basic hover effects.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="kpi-card text-center">
+                        <img src="../img/bootstrap.png" alt="Bootstrap" width="48" class="mb-2">
+                        <div class="kpi-label">Bootstrap 5</div>
+                        <p class="mt-1 mb-0" style="font-size:0.75rem;color:var(--text-secondary);">Grid system and utility classes for the layout.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="kpi-card text-center">
+                        <img src="../img/js-file.png" alt="JavaScript" width="48" class="mb-2">
+                        <div class="kpi-label">JavaScript</div>
+                        <p class="mt-1 mb-0" style="font-size:0.75rem;color:var(--text-secondary);">Basic interactivity and navigation behaviour.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- What I Learned -->
+        <div class="proj-page-section">
+            <h3 class="proj-page-section-title"><i class="bi bi-lightbulb"></i> What I Learned</h3>
+            <ul class="feature-list">
+                <li><i class="bi bi-check-circle-fill"></i> <strong>Portfolio mindset:</strong> Thinking about a project from the perspective of the visitor — what do they need to see quickly to understand who I am?</li>
+                <li><i class="bi bi-check-circle-fill"></i> <strong>Iterative improvement:</strong> The old version was intentionally left as a project entry in the current portfolio — a visual reminder that growth is always ongoing.</li>
+                <li><i class="bi bi-check-circle-fill"></i> <strong>CSS fundamentals:</strong> Consistent colour schemes, spacing, and typography — skills that directly feed into the current version's more advanced theming.</li>
+                <li><i class="bi bi-check-circle-fill"></i> <strong>Code organisation:</strong> Separating HTML structure from CSS styling from the start, establishing a habit of clean file structure.</li>
+            </ul>
+        </div>
+
+        <!-- CTA -->
+        <div class="proj-page-section">
+            <div class="cta-section">
+                <h4>See Where It Started</h4>
+                <p class="mb-4" style="color:var(--text-secondary);">View the original portfolio — compare it to what you're looking at now and see how far the design has come.</p>
+                <a href="../sd24-pofo-p03-portfolio-AhmedAlhamwi/index.html"
+                   class="btn btn-primary me-2">
+                    <i class="bi bi-eye-fill me-1"></i> View Old Portfolio
+                </a>
+                <a href="../index.html#projects" class="btn btn-github">
+                    <i class="bi bi-arrow-left me-1"></i> Back to Projects
+                </a>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+<footer class="bg-dark text-white text-center py-3 mt-5">
+    <div class="container">
+        &copy; Portfolio website Ahmed Alhamwi 2025. Alle rechten voorbehouden.
+    </div>
+</footer>
+<script src="../js/main.js"></script>
+</body>
+</html>

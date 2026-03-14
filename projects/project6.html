@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Project 6: Budget Buddy – Eclipse Sovereigns – Ahmed Alhamwi</title>
+    <meta name="description" content="Full-stack Symfony 7 web application for personal budgeting, user profiles, forums and contact forms. Built by Ahmed Alhamwi with secure authentication, Doctrine ORM, Docker, and Twig templating.">
+    <meta name="keywords" content="Symfony, PHP, Budget management, Personal finance, Web app, Doctrine ORM, Twig, Docker, MVC, Student project">
+</head>
+<body>
+
+<nav id="navbar" class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">Portfolio</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="../index.html#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="../index.html#about-me">About Me</a></li>
+                <li class="nav-item"><a class="nav-link active" href="../index.html#projects">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="../index.html#contact">Contact</a></li>
+                <li class="nav-item">
+                    <button id="theme-toggle" class="theme-toggle btn btn-outline-light ms-3">🌙</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero -->
+<header class="proj-page-hero">
+    <div class="container">
+        <a href="../index.html#projects" class="back-link">
+            <i class="bi bi-arrow-left"></i> Back to Projects
+        </a>
+        <div class="proj-page-badge mb-3">Symfony / Full-Stack</div>
+        <h1>Project 6: Budget Buddy – Eclipse Sovereigns</h1>
+        <p class="lead">A secure, full-stack Symfony 7 web application for personal finance management — featuring budget tracking, a community forum, user profiles, and Docker-Compose deployment. ROC Mondriaan Cohort 20 (2024–2025).</p>
+        <div class="tech-badges mt-3">
+            <span class="badge">Symfony 7</span>
+            <span class="badge">PHP 8.2</span>
+            <span class="badge">Doctrine ORM</span>
+            <span class="badge">Twig</span>
+            <span class="badge">MySQL</span>
+            <span class="badge">Docker</span>
+            <span class="badge">Stimulus JS</span>
+            <span class="badge">Scrum</span>
+            <span class="badge">Git</span>
+        </div>
+        <div class="proj-stat-row mt-4">
+            <div class="proj-stat"><div class="stat-number">9</div><div class="stat-label">Controllers</div></div>
+            <div class="proj-stat"><div class="stat-number">6</div><div class="stat-label">Entities</div></div>
+            <div class="proj-stat"><div class="stat-number">5.2k</div><div class="stat-label">Lines of Code</div></div>
+            <div class="proj-stat"><div class="stat-number">7.5</div><div class="stat-label">Health Score</div></div>
+            <div class="proj-stat"><div class="stat-number">8/10</div><div class="stat-label">Final Grade</div></div>
+        </div>
+    </div>
+</header>
+
+<main class="py-2">
+    <div class="container">
+
+        <!-- Vision & Business Goals -->
+        <div class="proj-page-section">
+            <h3 class="proj-page-section-title"><i class="bi bi-bullseye"></i> Project Vision &amp; Business Goals</h3>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="kpi-card text-start h-100">
+                        <h6 class="section-label">Core Purpose</h6>
+                        <p style="font-size:0.9rem;">Provide a secure, easy-to-use budgeting tool for students that tracks income, fixed costs, variable spending, and presents basic financial insights — all within a clean MVC architecture.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="kpi-card text-start h-100">
+                        <h6 class="section-label">Secondary Purpose</h6>
+                        <p style="font-size:0.9rem;">Offer a small community area (forum) and a contact channel to practice full-stack CRUD workflows, while demonstrating professional Symfony patterns to recruiters and teaching staff.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- KPI status -->
+            <div class="row g-3 mt-2">
+                <div class="col-12">
+                    <h6 class="section-label">KPI Delivery Status</h6>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="kpi-card text-start">
+                        <span style="color:#4caf50; font-size:1.1rem;">✅</span>
+                        <strong style="font-size:0.85rem;"> Core CRUD features work without bugs</strong>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="kpi-card text-start">
+                        <span style="color:#4caf50; font-size:1.1rem;">✅</span>
+                        <strong style="font-size:0.85rem;"> Auth &amp; file-upload security passed</strong>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="kpi-card text-start">
+                        <span style="color:#4caf50; font-size:1.1rem;">✅</span>
+                        <strong style="font-size:0.85rem;"> Peer demo rating ≈ 4.3 / 5</strong>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="kpi-card text-start">
+                        <span style="color:#f44336; font-size:1.1rem;">❌</span>
+                        <strong style="font-size:0.85rem;"> README &amp; documentation missing</strong>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="kpi-card text-start">
+                        <span style="color:#f44336; font-size:1.1rem;">❌</span>
+                        <strong style="font-size:0.85rem;"> No unit tests (PHPUnit config present)</strong>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="kpi-card text-start">
+                        <span style="color:#f44336; font-size:1.1rem;">❌</span>
+                        <strong style="font-size:0.85rem;"> Dashboard visualisation not implemented</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Key Features -->
+        <div class="proj-page-section">
+            <h3 class="proj-page-section-title"><i class="bi bi-star"></i> Key Features</h3>
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <ul class="feature-list">
+                        <li><i class="bi bi-check-circle-fill"></i> User registration, login &amp; profile editing with picture upload</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Budget categories (Income, Fixed Costs, Variable Spending) with limits</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Transaction CRUD per category</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Community forum with threads, replies &amp; pagination</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <ul class="feature-list">
+                        <li><i class="bi bi-check-circle-fill"></i> Contact form for authenticated users (stored in DB)</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Symfony Security — hashed passwords, CSRF, route-level authorization</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Docker-Compose dev environment (PHP-FPM, Nginx, MySQL)</li>
+                        <li><i class="bi bi-exclamation-circle-fill" style="color:var(--warning-color, #ffc107)"></i> Dashboard stub present — charts &amp; visualisation not yet built</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scope & Functional Requirements -->
+        <div class="proj-page-section">
+            <h3 class="proj-page-section-title"><i class="bi bi-list-check"></i> Scope &amp; Functional Requirements</h3>
+            <div class="table-responsive">
+                <table class="table table-sm proj-table">
+                    <thead>
+                        <tr><th>Feature</th><th>Description</th><th>Status</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>User management</td><td>Registration, login, profile editing, picture upload, public user list</td><td><span style="color:#4caf50;">✅ Complete</span></td></tr>
+                        <tr><td>Budget management</td><td>Category blueprints (Income / Fixed / Variable), transaction entry, budget limits</td><td><span style="color:#4caf50;">✅ Complete</span></td></tr>
+                        <tr><td>Forum</td><td>Thread creation, replies, pagination (8 items/page), user association</td><td><span style="color:#4caf50;">✅ Complete</span></td></tr>
+                        <tr><td>Contact form</td><td>Auth-gated message form with auto-fill, flash feedback, DB storage</td><td><span style="color:#4caf50;">✅ Complete</span></td></tr>
+                        <tr><td>Dashboard</td><td>Overview of budget totals, charts, recent transactions</td><td><span style="color:#ff9800;">⚠️ Controller stub only</span></td></tr>
+                        <tr><td>Charts / visualisation</td><td>Graphical income vs expenses comparison</td><td><span style="color:#f44336;">❌ Not implemented</span></td></tr>
+                        <tr><td>Transaction search / filter</td><td>Date range, category filter</td><td><span style="color:#f44336;">❌ Not present</span></td></tr>
+                        <tr><td>CSV / PDF export</td><td>Download transactions as file</td><td><span style="color:#f44336;">❌ Not present</span></td></tr>
+                        <tr><td>REST API</td><td>JSON endpoints for mobile / external clients</td><td><span style="color:#f44336;">❌ Not present</span></td></tr>
+                        <tr><td>Notifications</td><td>Email or UI alerts for budget overruns</td><td><span style="color:#f44336;">❌ Not present</span></td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Technology Stack -->
+        <div class="proj-page-section">
+            <h3 class="proj-page-section-title"><i class="bi bi-layers"></i> Technology Stack &amp; Patterns</h3>
+            <div class="table-responsive">
+                <table class="table table-sm proj-table">
+                    <thead>
+                        <tr><th>Layer</th><th>Technology</th><th>Why</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Backend</td><td>PHP 8.2, Symfony 7 (MVC)</td><td>Modern, production-ready, built-in DI &amp; security</td></tr>
+                        <tr><td>ORM</td><td>Doctrine ORM (MySQL)</td><td>Entity-based mapping, repository pattern</td></tr>
+                        <tr><td>Templating</td><td>Twig</td><td>Secure auto-escaping, clean layout inheritance</td></tr>
+                        <tr><td>Front-end</td><td>Stimulus JS + CSS/SCSS (Webpack)</td><td>Light-weight interactivity without heavy SPA overhead</td></tr>
+                        <tr><td>Containerisation</td><td>Docker-Compose (PHP-FPM, Nginx, DB)</td><td>Consistent dev environment, one-command spin-up</td></tr>
+                        <tr><td>Testing</td><td>PHPUnit (configured, no tests written)</td><td>Standard unit-testing framework for PHP</td></tr>
+                        <tr><td>Security</td><td>Symfony Security, password hashing, CSRF, file-upload sanitisation</td><td>Security-first architecture from day one</td></tr>
+                        <tr><td>Patterns used</td><td>MVC, Repository, Dependency Injection, Form Objects, Attribute-based routing</td><td>Separates concerns, enables easy extension</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Code Quality Metrics -->
+        <div class="proj-page-section">
+            <h3 class="proj-page-section-title"><i class="bi bi-bar-chart-line"></i> Code Quality Metrics</h3>
+            <div class="row g-3 mb-4">
+                <div class="col-6 col-md-3">
+                    <div class="kpi-card text-center">
+                        <div class="kpi-value">5,200</div>
+                        <div class="kpi-label">Lines of Code</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="kpi-card text-center">
+                        <div class="kpi-value">9</div>
+                        <div class="kpi-label">Controllers</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="kpi-card text-center">
+                        <div class="kpi-value">6</div>
+                        <div class="kpi-label">Entities</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="kpi-card text-center">
+                        <div class="kpi-value">0%</div>
+                        <div class="kpi-label">Test Coverage</div>
+                    </div>
+                </div>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-sm proj-table">
+                    <thead>
+                        <tr><th>Metric</th><th>Value</th><th>Comment</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>PHP distribution</td><td>PHP 48% · Twig 35% · JS 12% · CSS 5%</td><td>Healthy backend-to-template ratio</td></tr>
+                        <tr><td>Complexity</td><td>Low–Medium</td><td>Most methods &lt; 20 lines; simple CRUD flows</td></tr>
+                        <tr><td>Security</td><td>Passwords hashed, CSRF active, upload safe</td><td>UserPasswordHasherInterface + SluggerInterface</td></tr>
+                        <tr><td>Static analysis</td><td>No obvious compiler warnings</td><td>PHPMD/PHPCS not run</td></tr>
+                        <tr><td>Performance</td><td>No caching; potential N+1 queries</td><td>Symfony Cache &amp; JOIN fetching recommended</td></tr>
+                        <tr><td>Docker</td><td>docker-compose.yml present</td><td>Reproducible dev environment ✅</td></tr>
+                        <tr><td>CI/CD</td><td>None (no GitHub Actions)</td><td>Critical gap ❌</td></tr>
+                        <tr><td>Documentation</td><td>README = 23 bytes (placeholder)</td><td>Critical gap ❌</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Final Scorecard -->
+        <div class="proj-page-section">
+            <h3 class="proj-page-section-title"><i class="bi bi-clipboard-data"></i> Final Scorecard</h3>
+            <div class="row g-3">
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="kpi-card text-center"><div class="kpi-value">9</div><div class="kpi-label">Architecture</div></div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="kpi-card text-center"><div class="kpi-value">8.5</div><div class="kpi-label">Security</div></div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="kpi-card text-center"><div class="kpi-value">9</div><div class="kpi-label">Code Organisation</div></div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="kpi-card text-center"><div class="kpi-value">7</div><div class="kpi-label">Feature Completeness</div></div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="kpi-card text-center"><div class="kpi-value">8.5</div><div class="kpi-label">Database Design</div></div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="kpi-card text-center"><div class="kpi-value">4</div><div class="kpi-label">Testing</div></div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="kpi-card text-center"><div class="kpi-value">4</div><div class="kpi-label">Documentation</div></div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="kpi-card text-center"><div class="kpi-value">7.5</div><div class="kpi-label">Overall Health</div></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Agile / Scrum -->
+        <div class="proj-page-section">
+            <h3 class="proj-page-section-title"><i class="bi bi-kanban"></i> Agile / Scrum Practice</h3>
+            <div class="table-responsive">
+                <table class="table table-sm proj-table">
+                    <thead>
+                        <tr><th>Artefact</th><th>Evidence</th><th>Rating</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Backlog &amp; Sprint Planning</td><td>Behoefteanalyse_Budget_Buddy_Ahmed.docx + Template-releaseplanning-Ahmed.docx</td><td>⭐⭐⭐⭐</td></tr>
+                        <tr><td>Daily Stand-ups</td><td>Template-daily-scrum-Ahmed.docx used for daily notes</td><td>⭐⭐⭐⭐</td></tr>
+                        <tr><td>Sprint Review &amp; Retrospective</td><td>Review-Ahmed.docx + Retrospective-Ahmed.docx produced</td><td>⭐⭐⭐</td></tr>
+                        <tr><td>Definition of Done</td><td>Controllers use #[IsGranted], form validation, flash messages — implicit DoD applied</td><td>⭐⭐⭐</td></tr>
+                        <tr><td>Version Control</td><td>All work on main; no feature branches visible</td><td>⭐⭐</td></tr>
+                        <tr><td>Testing</td><td>PHPUnit config present but no test cases written</td><td>⭐</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="small mt-2" style="color:var(--text-secondary);">Overall Scrum Health: <strong>6 / 10</strong> — process followed, but limited formal artefacts and missing test-driven development.</p>
+        </div>
+
+        <!-- Evaluation -->
+        <div class="proj-page-section">
+            <h3 class="proj-page-section-title"><i class="bi bi-bar-chart"></i> Strengths vs Gaps</h3>
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <div class="analysis-box strengths-box h-100">
+                        <strong><i class="bi bi-trophy-fill me-1"></i>Strengths</strong>
+                        <ul class="mt-2 ps-3 mb-0">
+                            <li>Professional Symfony 7 architecture (MVC + DI)</li>
+                            <li>Passwords hashed, CSRF active, safe file uploads</li>
+                            <li>Doctrine ORM — normalised DB with FK constraints</li>
+                            <li>Symfony Form types provide server-side validation</li>
+                            <li>KnpPaginatorBundle — forum pagination built in</li>
+                            <li>Docker-Compose — one-command dev environment</li>
+                            <li>NavigationBarController + reusable Twig base layout</li>
+                            <li>Scrum artefacts (stand-ups, retros) produced daily</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="analysis-box improvements-box h-100">
+                        <strong><i class="bi bi-lightbulb-fill me-1"></i>Gaps &amp; Improvements</strong>
+                        <ul class="mt-2 ps-3 mb-0">
+                            <li>Write README &amp; architecture docs (critical)</li>
+                            <li>Add PHPUnit unit tests — target ≥ 30% coverage</li>
+                            <li>Set up GitHub Actions CI (phpunit, phpstan)</li>
+                            <li>Implement Dashboard with Chart.js visualisation</li>
+                            <li>Add REST API layer (API Platform or manual JSON)</li>
+                            <li>Fix potential N+1 queries — use JOIN fetching</li>
+                            <li>Enable Symfony Cache (HTTP cache / Redis)</li>
+                            <li>Add CSV export &amp; transaction search/filter</li>
+                            <li>Adopt Git Flow (feature branches, PR reviews)</li>
+                            <li>Integrate Bootstrap 5 for responsive mobile layout</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Roadmap -->
+        <div class="proj-page-section">
+            <h3 class="proj-page-section-title"><i class="bi bi-map"></i> Recommendations &amp; Roadmap</h3>
+            <div class="table-responsive">
+                <table class="table table-sm proj-table">
+                    <thead>
+                        <tr><th>Sprint</th><th>Goal</th><th>Key Tasks</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><span style="color:#f44336;">Sprint 0</span></td><td>Documentation &amp; CI</td><td>Write README, add API spec (OpenAPI), create GitHub Actions workflow (phpunit + phpstan + Docker build)</td></tr>
+                        <tr><td><span style="color:#f44336;">Sprint 1</span></td><td>Test Coverage</td><td>Write unit tests for UserRepository, BudgetController &amp; form validation — target ≥ 30% coverage, run on CI</td></tr>
+                        <tr><td><span style="color:#ff9800;">Sprint 2</span></td><td>Dashboard UI</td><td>Implement DashboardController + Twig + Chart.js (income vs expenses) + /api/dashboard endpoint</td></tr>
+                        <tr><td><span style="color:#ff9800;">Sprint 3</span></td><td>Export &amp; Search</td><td>CSV export button on transaction list; date-range &amp; category search filter</td></tr>
+                        <tr><td><span style="color:#ff9800;">Sprint 4</span></td><td>API Layer</td><td>Create /api/ namespace (JSON for Users, Transactions, Categories), secure with JWT</td></tr>
+                        <tr><td><span style="color:#4caf50;">Sprint 5</span></td><td>Front-end Polish</td><td>Integrate Bootstrap 5 for responsive layout; Stimulus controllers for modal dialogs &amp; inline editing</td></tr>
+                        <tr><td><span style="color:#4caf50;">Sprint 6</span></td><td>Performance &amp; Security</td><td>Doctrine eager-loading, Symfony HTTP cache, explicit MIME-type validation for uploads</td></tr>
+                        <tr><td><span style="color:#4caf50;">Sprint 7</span></td><td>i18n &amp; Accessibility</td><td>Populate translations/ (EN/NL), add ARIA labels, improve color contrast</td></tr>
+                        <tr><td><span style="color:#9c27b0;">Sprint 8</span></td><td>Final Release</td><td>Tag v1.0.0, produce production Docker image, update portfolio with live demo link</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Deliverables -->
+        <div class="proj-page-section">
+            <h3 class="proj-page-section-title"><i class="bi bi-file-earmark-check"></i> Deliverables &amp; Artefacts</h3>
+            <div class="deliverables-grid">
+                <span class="deliverable-pill"><i class="bi bi-file-text"></i> Behoefteanalyse (needs analysis)</span>
+                <span class="deliverable-pill"><i class="bi bi-calendar-range"></i> Release planning document</span>
+                <span class="deliverable-pill"><i class="bi bi-journal-check"></i> Daily Scrum logs</span>
+                <span class="deliverable-pill"><i class="bi bi-github"></i> Git repository</span>
+                <span class="deliverable-pill"><i class="bi bi-docker"></i> Docker-Compose environment</span>
+                <span class="deliverable-pill"><i class="bi bi-journal"></i> Sprint review document</span>
+                <span class="deliverable-pill"><i class="bi bi-arrow-repeat"></i> Retrospective document</span>
+                <span class="deliverable-pill"><i class="bi bi-shield-check"></i> Security review (auth + uploads)</span>
+            </div>
+        </div>
+
+        <!-- Repository Structure -->
+        <div class="proj-page-section">
+            <h3 class="proj-page-section-title"><i class="bi bi-folder2-open"></i> Repository Structure</h3>
+            <pre style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:1.25rem;font-size:0.78rem;color:var(--text-secondary);overflow-x:auto;line-height:1.7;">sd24-project-p05-budget-buddy-eclipse-sovereigns/
+├─ .env, .env.test                  <span style="color:var(--text-dim,#888);"># environment configs</span>
+├─ composer.json / composer.lock    <span style="color:var(--text-dim,#888);"># PHP dependencies</span>
+├─ phpunit.xml.dist                 <span style="color:var(--text-dim,#888);"># test runner config (empty)</span>
+├─ docker-compose.yml               <span style="color:var(--text-dim,#888);"># dev environment</span>
+├─ src/
+│   ├─ Controller/
+│   │   ├─ PersonController.php
+│   │   ├─ ProfileController.php
+│   │   ├─ ForumController.php
+│   │   ├─ RegistrationController.php
+│   │   ├─ BudgetController.php
+│   │   ├─ CategoryController.php
+│   │   ├─ ContactPageController.php
+│   │   ├─ DashboardController.php  <span style="color:#ff9800;">(stub – not implemented)</span>
+│   │   └─ NavigationBarController.php
+│   ├─ Entity/
+│   │   ├─ User.php, Category.php, Transaction.php
+│   │   ├─ Forum.php, ForumReply.php, Contact.php
+│   ├─ Form/
+│   │   ├─ RegistrationFormType.php, ProfileFormType.php
+│   │   ├─ ForumType.php, CategoryBudgetType.php
+│   ├─ Repository/
+│   │   ├─ UserRepository.php
+│   │   ├─ CategoryRepository.php
+│   │   └─ TransactionRepository.php
+│   └─ Security/
+├─ templates/
+│   ├─ base.html.twig
+│   └─ profile/, budget/, forum/, registration/, contact_page/
+├─ assets/
+│   ├─ styles/
+│   └─ controllers/  <span style="color:var(--text-dim,#888);">(Stimulus JS)</span>
+├─ migrations/
+└─ tests/            <span style="color:#f44336;">(empty – no tests written)</span></pre>
+        </div>
+
+        <!-- CTA -->
+        <div class="proj-page-section">
+            <div class="cta-section">
+                <h4>Explore the Source Code</h4>
+                <p class="mb-4" style="color:var(--text-secondary);">Browse the full Symfony 7 project on GitHub — controllers, entities, Twig templates, Docker setup, and all Scrum artefacts.</p>
+                <a href="https://github.com/ROCMondriaanTIN/sd24-project-p05-budget-buddy-eclipse-sovereigns"
+                   class="btn btn-github me-2" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-github me-1"></i> GitHub Repository
+                </a>
+                <a href="../index.html#projects" class="btn btn-primary">
+                    <i class="bi bi-arrow-left me-1"></i> Back to Projects
+                </a>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+<footer class="bg-dark text-white text-center py-3 mt-5">
+    <div class="container">
+        &copy; Portfolio website Ahmed Alhamwi 2025. Alle rechten voorbehouden.
+    </div>
+</footer>
+<script src="../js/main.js"></script>
+</body>
+</html>

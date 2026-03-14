@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../css/style.css">
     <title>Project 6: Budget Buddy – Eclipse Sovereigns – Ahmed Alhamwi</title>
-    <meta name="description" content="Full-stack Symfony 7 web application for personal budgeting, user profiles, forums and contact forms. Built by Ahmed Alhamwi with secure authentication, Doctrine ORM, Docker, and Twig templating.">
-    <meta name="keywords" content="Symfony, PHP, Budget management, Personal finance, Web app, Doctrine ORM, Twig, Docker, MVC, Student project">
+    <meta name="description" content="Full-stack Symfony 7 web application for personal budgeting, user profiles, forums and contact forms. Built by Ahmed Alhamwi with secure authentication, Doctrine ORM, and Twig templating.">
+    <meta name="keywords" content="Symfony, PHP, Budget management, Personal finance, Web app, Doctrine ORM, Twig, MVC, Student project">
 </head>
 <body>
 
@@ -42,15 +42,13 @@
         </a>
         <div class="proj-page-badge mb-3">Symfony / Full-Stack</div>
         <h1>Project 6: Budget Buddy – Eclipse Sovereigns</h1>
-        <p class="lead">A secure, full-stack Symfony 7 web application for personal finance management — featuring budget tracking, a community forum, user profiles, and Docker-Compose deployment. ROC Mondriaan Cohort 20 (2024–2025).</p>
+        <p class="lead">A secure, full-stack Symfony 7 web application for personal finance management — featuring budget tracking, a community forum, user profiles, and manual testing with a test rapport. ROC Mondriaan Cohort 20 (2024–2025).</p>
         <div class="tech-badges mt-3">
             <span class="badge">Symfony 7</span>
             <span class="badge">PHP 8.2</span>
             <span class="badge">Doctrine ORM</span>
             <span class="badge">Twig</span>
             <span class="badge">MySQL</span>
-            <span class="badge">Docker</span>
-            <span class="badge">Stimulus JS</span>
             <span class="badge">Scrum</span>
             <span class="badge">Git</span>
         </div>
@@ -116,8 +114,8 @@
                 </div>
                 <div class="col-md-6 col-lg-4">
                     <div class="kpi-card text-start">
-                        <span style="color:#f44336; font-size:1.1rem;">❌</span>
-                        <strong style="font-size:0.85rem;"> No unit tests (PHPUnit config present)</strong>
+                        <span style="color:#4caf50; font-size:1.1rem;">✅</span>
+                        <strong style="font-size:0.85rem;"> Manual testing done — test rapport submitted</strong>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4">
@@ -145,7 +143,7 @@
                     <ul class="feature-list">
                         <li><i class="bi bi-check-circle-fill"></i> Contact form for authenticated users (stored in DB)</li>
                         <li><i class="bi bi-check-circle-fill"></i> Symfony Security — hashed passwords, CSRF, route-level authorization</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Docker-Compose dev environment (PHP-FPM, Nginx, MySQL)</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Manual testing completed — test cases documented in test rapport</li>
                         <li><i class="bi bi-exclamation-circle-fill" style="color:var(--warning-color, #ffc107)"></i> Dashboard stub present — charts &amp; visualisation not yet built</li>
                     </ul>
                 </div>
@@ -188,9 +186,8 @@
                         <tr><td>Backend</td><td>PHP 8.2, Symfony 7 (MVC)</td><td>Modern, production-ready, built-in DI &amp; security</td></tr>
                         <tr><td>ORM</td><td>Doctrine ORM (MySQL)</td><td>Entity-based mapping, repository pattern</td></tr>
                         <tr><td>Templating</td><td>Twig</td><td>Secure auto-escaping, clean layout inheritance</td></tr>
-                        <tr><td>Front-end</td><td>Stimulus JS + CSS/SCSS (Webpack)</td><td>Light-weight interactivity without heavy SPA overhead</td></tr>
-                        <tr><td>Containerisation</td><td>Docker-Compose (PHP-FPM, Nginx, DB)</td><td>Consistent dev environment, one-command spin-up</td></tr>
-                        <tr><td>Testing</td><td>PHPUnit (configured, no tests written)</td><td>Standard unit-testing framework for PHP</td></tr>
+                        <tr><td>Front-end</td><td>CSS/SCSS</td><td>Custom styling compiled alongside Twig templates</td></tr>
+                        <tr><td>Testing</td><td>Manual testing + test rapport</td><td>All features tested by hand; results documented in a test rapport file</td></tr>
                         <tr><td>Security</td><td>Symfony Security, password hashing, CSRF, file-upload sanitisation</td><td>Security-first architecture from day one</td></tr>
                         <tr><td>Patterns used</td><td>MVC, Repository, Dependency Injection, Form Objects, Attribute-based routing</td><td>Separates concerns, enables easy extension</td></tr>
                     </tbody>
@@ -222,8 +219,8 @@
                 </div>
                 <div class="col-6 col-md-3">
                     <div class="kpi-card text-center">
-                        <div class="kpi-value">0%</div>
-                        <div class="kpi-label">Test Coverage</div>
+                        <div class="kpi-value">Manual</div>
+                        <div class="kpi-label">Testing Type</div>
                     </div>
                 </div>
             </div>
@@ -237,9 +234,9 @@
                         <tr><td>Complexity</td><td>Low–Medium</td><td>Most methods &lt; 20 lines; simple CRUD flows</td></tr>
                         <tr><td>Security</td><td>Passwords hashed, CSRF active, upload safe</td><td>UserPasswordHasherInterface + SluggerInterface</td></tr>
                         <tr><td>Static analysis</td><td>No obvious compiler warnings</td><td>PHPMD/PHPCS not run</td></tr>
+                        <tr><td>Testing</td><td>Manual test rapport submitted</td><td>All core flows tested by hand ✅</td></tr>
                         <tr><td>Performance</td><td>No caching; potential N+1 queries</td><td>Symfony Cache &amp; JOIN fetching recommended</td></tr>
-                        <tr><td>Docker</td><td>docker-compose.yml present</td><td>Reproducible dev environment ✅</td></tr>
-                        <tr><td>CI/CD</td><td>None (no GitHub Actions)</td><td>Critical gap ❌</td></tr>
+                        <tr><td>CI/CD</td><td>None (no GitHub Actions)</td><td>Future improvement ⚠️</td></tr>
                         <tr><td>Documentation</td><td>README = 23 bytes (placeholder)</td><td>Critical gap ❌</td></tr>
                     </tbody>
                 </table>
@@ -266,7 +263,7 @@
                     <div class="kpi-card text-center"><div class="kpi-value">8.5</div><div class="kpi-label">Database Design</div></div>
                 </div>
                 <div class="col-6 col-md-4 col-lg-3">
-                    <div class="kpi-card text-center"><div class="kpi-value">4</div><div class="kpi-label">Testing</div></div>
+                    <div class="kpi-card text-center"><div class="kpi-value">7</div><div class="kpi-label">Testing</div></div>
                 </div>
                 <div class="col-6 col-md-4 col-lg-3">
                     <div class="kpi-card text-center"><div class="kpi-value">4</div><div class="kpi-label">Documentation</div></div>
@@ -291,11 +288,11 @@
                         <tr><td>Sprint Review &amp; Retrospective</td><td>Review-Ahmed.docx + Retrospective-Ahmed.docx produced</td><td>⭐⭐⭐</td></tr>
                         <tr><td>Definition of Done</td><td>Controllers use #[IsGranted], form validation, flash messages — implicit DoD applied</td><td>⭐⭐⭐</td></tr>
                         <tr><td>Version Control</td><td>All work on main; no feature branches visible</td><td>⭐⭐</td></tr>
-                        <tr><td>Testing</td><td>PHPUnit config present but no test cases written</td><td>⭐</td></tr>
+                        <tr><td>Testing</td><td>Manual testing completed; all results documented in a test rapport file</td><td>⭐⭐⭐</td></tr>
                     </tbody>
                 </table>
             </div>
-            <p class="small mt-2" style="color:var(--text-secondary);">Overall Scrum Health: <strong>6 / 10</strong> — process followed, but limited formal artefacts and missing test-driven development.</p>
+            <p class="small mt-2" style="color:var(--text-secondary);">Overall Scrum Health: <strong>7 / 10</strong> — process followed with daily stand-ups, sprint planning, retrospectives, and a manual test rapport.</p>
         </div>
 
         <!-- Evaluation -->
@@ -311,7 +308,7 @@
                             <li>Doctrine ORM — normalised DB with FK constraints</li>
                             <li>Symfony Form types provide server-side validation</li>
                             <li>KnpPaginatorBundle — forum pagination built in</li>
-                            <li>Docker-Compose — one-command dev environment</li>
+                            <li>Manual testing completed — test rapport with all results</li>
                             <li>NavigationBarController + reusable Twig base layout</li>
                             <li>Scrum artefacts (stand-ups, retros) produced daily</li>
                         </ul>
@@ -322,8 +319,7 @@
                         <strong><i class="bi bi-lightbulb-fill me-1"></i>Gaps &amp; Improvements</strong>
                         <ul class="mt-2 ps-3 mb-0">
                             <li>Write README &amp; architecture docs (critical)</li>
-                            <li>Add PHPUnit unit tests — target ≥ 30% coverage</li>
-                            <li>Set up GitHub Actions CI (phpunit, phpstan)</li>
+                            <li>Set up GitHub Actions CI (automated testing, phpstan)</li>
                             <li>Implement Dashboard with Chart.js visualisation</li>
                             <li>Add REST API layer (API Platform or manual JSON)</li>
                             <li>Fix potential N+1 queries — use JOIN fetching</li>
@@ -368,7 +364,7 @@
                 <span class="deliverable-pill"><i class="bi bi-calendar-range"></i> Release planning document</span>
                 <span class="deliverable-pill"><i class="bi bi-journal-check"></i> Daily Scrum logs</span>
                 <span class="deliverable-pill"><i class="bi bi-github"></i> Git repository</span>
-                <span class="deliverable-pill"><i class="bi bi-docker"></i> Docker-Compose environment</span>
+                <span class="deliverable-pill"><i class="bi bi-clipboard-check"></i> Test rapport (manual testing)</span>
                 <span class="deliverable-pill"><i class="bi bi-journal"></i> Sprint review document</span>
                 <span class="deliverable-pill"><i class="bi bi-arrow-repeat"></i> Retrospective document</span>
                 <span class="deliverable-pill"><i class="bi bi-shield-check"></i> Security review (auth + uploads)</span>
@@ -381,8 +377,6 @@
             <pre style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:1.25rem;font-size:0.78rem;color:var(--text-secondary);overflow-x:auto;line-height:1.7;">sd24-project-p05-budget-buddy-eclipse-sovereigns/
 ├─ .env, .env.test                  <span style="color:var(--text-dim,#888);"># environment configs</span>
 ├─ composer.json / composer.lock    <span style="color:var(--text-dim,#888);"># PHP dependencies</span>
-├─ phpunit.xml.dist                 <span style="color:var(--text-dim,#888);"># test runner config (empty)</span>
-├─ docker-compose.yml               <span style="color:var(--text-dim,#888);"># dev environment</span>
 ├─ src/
 │   ├─ Controller/
 │   │   ├─ PersonController.php
@@ -409,17 +403,16 @@
 │   ├─ base.html.twig
 │   └─ profile/, budget/, forum/, registration/, contact_page/
 ├─ assets/
-│   ├─ styles/
-│   └─ controllers/  <span style="color:var(--text-dim,#888);">(Stimulus JS)</span>
+│   └─ styles/
 ├─ migrations/
-└─ tests/            <span style="color:#f44336;">(empty – no tests written)</span></pre>
+└─ tests/            <span style="color:var(--text-dim,#888);">(manual test rapport submitted separately)</span></pre>
         </div>
 
         <!-- CTA -->
         <div class="proj-page-section">
             <div class="cta-section">
                 <h4>Explore the Source Code</h4>
-                <p class="mb-4" style="color:var(--text-secondary);">Browse the full Symfony 7 project on GitHub — controllers, entities, Twig templates, Docker setup, and all Scrum artefacts.</p>
+                <p class="mb-4" style="color:var(--text-secondary);">Browse the full Symfony 7 project on GitHub — controllers, entities, Twig templates, and all Scrum artefacts including the test rapport.</p>
                 <a href="https://github.com/ROCMondriaanTIN/sd24-project-p05-budget-buddy-eclipse-sovereigns"
                    class="btn btn-github me-2" target="_blank" rel="noopener noreferrer">
                     <i class="bi bi-github me-1"></i> GitHub Repository

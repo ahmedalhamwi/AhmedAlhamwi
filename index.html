@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,111 +7,274 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Portfolio – Ahmed Alhamwi</title>
+    <title>Ahmed Alhamwi – Portfolio</title>
+    <meta name="description" content="Portfolio of Ahmed Alhamwi — ICT Software Development student at ROC Mondriaan. Full-stack web apps, Unity games, and more.">
 </head>
 <body>
+
+<!-- ==================== NAVBAR ==================== -->
 <nav id="navbar" class="navbar navbar-expand-lg">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">Portfolio</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+        <a class="navbar-brand fw-bold" href="#home">Ahmed.</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
+            <ul class="navbar-nav ms-auto align-items-center">
+                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about-me">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                    <div class="nav-socials ms-2">
+                        <a href="https://github.com/ROCMondriaanTIN" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub">
+                            <i class="bi bi-github"></i>
+                        </a>
+                        <a href="https://www.instagram.com/achie_ms_05" target="_blank" rel="noopener" title="Instagram" aria-label="Instagram">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                    </div>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#about-me">About Me</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#projects">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact</a>
-                </li>
-                <li class="nav-item">
-                    <button id="theme-toggle" class="theme-toggle btn btn-outline-light ms-3">🌙</button>
+                <li class="nav-item ms-2">
+                    <button id="theme-toggle" class="theme-toggle btn btn-outline-light">🌙</button>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
 
-
-    <header class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Welkom to My Portofolio-website</h1>
-                <p>Discover my skills, experiences, and achievements on this page.</p>
-            </div>
-        </div>
-    </header>
-
-    <section class="py-5" id="about-me"> <!-- Section with padding on y-axis, identified as about-me -->
-        <div class="container"> <!-- Bootstrap container for fixed width and horizontal padding -->
-            <h2 class="text-center mb-4">Welcome to My Portfolio Website!</h2> <!-- Centered heading with bottom margin -->
-            <div class="row align-items-center"> <!-- Bootstrap row with vertical alignment center -->
-                <div class="col-md-7"> <!-- Column taking 7/12 width on medium+ screens , image centered -->
-                    <p>My name is Ahmed Alhamwi, a 19-year-old first-year ICT Software Development student at ROC Mondriaan. I started this program in 2024 in class B1J. Previously, I completed my MAVO diploma in 2022 and continued with HAVO-level coursework, including computer science. From a young age, I've been fascinated by how computer programs work, which naturally led me to pursue a career in software development. I am passionate about building innovative software solutions and designing user-friendly interfaces that make a real impact.</p> <!-- About me text -->
-                </div>
-                <div class="col-md-5 text-center"> <!-- Column taking 5/12 width on medium+ screens, text centered -->
-                    <img src="img/selfie-Ahmed.jpg" alt="Ahmed Alhamwi Selfie" class="img-fluid rounded shadow about-me-img"> <!-- Responsive image with rounded corners, shadow, and custom styling -->
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="bg-light py-5">
-        <div class="container">
-            <h2 class="text-center mb-4">My Strengths</h2>
-            <p>I am a creative and independent thinker who values reliability, dedication, and perseverance. I don’t give up easily, and I thrive in team environments where collaboration and communication are essential. I approach tasks with focus and structure, and I’m highly adaptable, learning quickly—especially when it comes to logical problem-solving. I believe in continuous improvement through constructive feedback, both giving and receiving, to grow together with those I work with.</p>
-        </div>
-    </section>
-
-    <section class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-4">Experience</h2>
-            <p>Throughout my studies in ICT, I’ve worked on multiple programming projects and learned new languages along the way. During my time in HAVO, I studied computer science, where I created projects like a hangman game using JavaScript in the console. At the MBO level, I’ve built projects including a web application for managing personal finances and an interactive browser-based game. Each project has helped me improve both my technical and problem-solving skills.</p>
-        </div>
-    </section>
-
-    <section class="bg-light py-5">
-        <div class="container">
-            <h2 class="text-center mb-4">Technical Skills</h2>
-            <p>I am proficient in <strong>HTML</strong> and <strong>CSS</strong>, which I use to structure and style my web projects. I also work with <strong>JavaScript</strong> to build interactive and dynamic user experiences, and have already completed several projects using this language. Currently, I’m expanding my front-end development knowledge by learning how to use the <strong>Bootstrap</strong> framework to build responsive, mobile-friendly layouts efficiently.</p>
-            <p>In addition, I am advancing my skills in <strong>PHP</strong> and <strong>MySQL</strong> as part of a new full-stack project I'm developing, where I aim to integrate dynamic server-side logic with database management. I’m also diving into game development, learning <strong>Unity</strong> and <strong>C#</strong> to create interactive and engaging games.</p>
-            <p>My goal is to continue broadening my expertise by learning modern frameworks such as <strong>React</strong> and <strong>Vue.js</strong>, and to keep improving my back-end development skills. I am committed to lifelong learning and constantly seek opportunities to grow as a developer.</p>
-
-            <div class="row text-center mt-5">
-                <div class="col"><img src="img/html-5.png" alt="HTML5" width="60"></div>
-                <div class="col"><img src="img/css-3.png" alt="CSS3" width="60"></div>
-                <div class="col"><img src="img/js-file.png" alt="JavaScript" width="60"></div>
-                <div class="col"><img src="img/bootstrap.png" alt="Bootstrap" width="60"></div>
-                <div class="col"><img src="img/php.png" alt="PHP" width="60"></div>
-                <div class="col"><img src="img/database.png" alt="MySQL" width="60"></div>
-                <div class="col"><img src="img/unity.png" alt="Unity" width="60"></div>
-                <div class="col"><img src="img/c-sharp.png" alt="C#" width="60"></div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-4">Additional Experience</h2>
-            <p>Outside of IT, I also have valuable work experience in the retail sector. I worked for a year at Albert Heijn and have been employed at Lidl for over 2.5 years. These roles have helped me develop strong interpersonal skills, including customer service and teamwork. I’ve also learned how to handle workplace challenges and take initiative in supporting and guiding colleagues.</p>
-        </div>
-    </section>
-
-<section class="bg-light py-5" id="projects">
+<!-- ==================== HERO ==================== -->
+<header class="hero" id="home">
     <div class="container">
-        <h2 class="text-center mb-2">Projects</h2>
-        <p class="text-center mb-5">A collection of projects I've built during my ICT studies. Click any card to view the full details, analysis, and documentation.</p>
+        <div class="hero-inner">
+
+            <!-- Left: Text -->
+            <div class="hero-text">
+                <p class="hero-eyebrow">Hello, I'm</p>
+                <h1 class="hero-name">Ahmed<br>Alhamwi.</h1>
+                <div class="hero-role">
+                    <span class="hero-role-dot"></span>
+                    ICT Software Developer
+                </div>
+                <p class="hero-desc">First-year Software Development student at ROC Mondriaan — building full-stack web applications, interactive browser games, and Unity experiences.</p>
+                <div class="hero-btns">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                </div>
+                <div class="hero-socials">
+                    <a href="https://github.com/ROCMondriaanTIN" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub">
+                        <i class="bi bi-github"></i>
+                    </a>
+                    <a href="https://www.instagram.com/achie_ms_05" target="_blank" rel="noopener" title="Instagram" aria-label="Instagram">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                    <a href="mailto:Alhamwi535@gmail.com" title="Email" aria-label="Email">
+                        <i class="bi bi-envelope-fill"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right: Photo -->
+            <div class="hero-photo">
+                <div class="hero-photo-wrap">
+                    <img src="img/selfie-Ahmed.jpg" alt="Ahmed Alhamwi">
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <a href="#about-me" class="hero-scroll" aria-label="Scroll to About section">
+        <i class="bi bi-chevron-down"></i>
+    </a>
+</header>
+
+<!-- ==================== ABOUT ==================== -->
+<section id="about-me" class="section">
+    <div class="container">
+        <div class="section-header reveal">
+            <span class="section-eyebrow">Get To Know Me</span>
+            <h2>About Me</h2>
+        </div>
+        <div class="row align-items-center g-5">
+            <div class="col-lg-5 reveal">
+                <div class="about-img-wrap">
+                    <img src="img/selfie-Ahmed.jpg" alt="Ahmed Alhamwi" class="about-img">
+                </div>
+            </div>
+            <div class="col-lg-7 reveal">
+                <p>My name is Ahmed Alhamwi, a 19-year-old first-year ICT Software Development student at ROC Mondriaan. I started this program in 2024 in class B1J. Previously, I completed my MAVO diploma in 2022 and continued with HAVO-level coursework, including computer science. From a young age, I've been fascinated by how computer programs work, which naturally led me to pursue a career in software development.</p>
+                <p>I am passionate about building innovative software solutions and designing user-friendly interfaces that make a real impact.</p>
+                <div class="about-stats">
+                    <div class="about-stat">
+                        <span class="stat-num">6</span>
+                        <span class="stat-lbl">Projects</span>
+                    </div>
+                    <div class="about-stat">
+                        <span class="stat-num">1+</span>
+                        <span class="stat-lbl">Year Studying</span>
+                    </div>
+                    <div class="about-stat">
+                        <span class="stat-num">8+</span>
+                        <span class="stat-lbl">Technologies</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== STRENGTHS ==================== -->
+<section class="section section-alt">
+    <div class="container">
+        <div class="section-header text-center reveal">
+            <span class="section-eyebrow">What Defines Me</span>
+            <h2>My Strengths</h2>
+        </div>
+        <div class="strengths-grid">
+            <div class="strength-card reveal">
+                <i class="bi bi-lightbulb-fill sc-icon"></i>
+                <h5>Creative Thinker</h5>
+                <p>I approach every problem with curiosity and imagination, finding solutions that are both practical and innovative.</p>
+            </div>
+            <div class="strength-card reveal">
+                <i class="bi bi-people-fill sc-icon"></i>
+                <h5>Team Player</h5>
+                <p>I thrive in collaborative environments — communicating clearly, supporting teammates, and delivering together.</p>
+            </div>
+            <div class="strength-card reveal">
+                <i class="bi bi-shield-fill-check sc-icon"></i>
+                <h5>Perseverance</h5>
+                <p>I don't give up easily. I face challenges head-on, learn from setbacks, and keep improving with every iteration.</p>
+            </div>
+            <div class="strength-card reveal">
+                <i class="bi bi-arrow-repeat sc-icon"></i>
+                <h5>Adaptability</h5>
+                <p>I pick up new languages, frameworks, and tools quickly — whether that's PHP, C#, or a new project methodology.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== EXPERIENCE ==================== -->
+<section class="section">
+    <div class="container">
+        <div class="section-header text-center reveal">
+            <span class="section-eyebrow">My Journey</span>
+            <h2>Experience</h2>
+        </div>
+        <div class="experience-timeline reveal">
+            <div class="exp-item">
+                <div class="exp-dot"></div>
+                <div class="exp-content">
+                    <h5>ICT Software Development — ROC Mondriaan</h5>
+                    <p>2024 – Present &nbsp;·&nbsp; MBO Level 4 &nbsp;·&nbsp; Building web apps, games, and full-stack projects while learning Scrum, PHP, Symfony, JavaScript, and Unity.</p>
+                </div>
+            </div>
+            <div class="exp-item">
+                <div class="exp-dot"></div>
+                <div class="exp-content">
+                    <h5>Retail Associate — Lidl</h5>
+                    <p>2022 – Present &nbsp;·&nbsp; 2.5+ years &nbsp;·&nbsp; Developed strong customer service, teamwork, and initiative skills in a fast-paced retail environment.</p>
+                </div>
+            </div>
+            <div class="exp-item">
+                <div class="exp-dot"></div>
+                <div class="exp-content">
+                    <h5>Retail Employee — Albert Heijn</h5>
+                    <p>2021 – 2022 &nbsp;·&nbsp; 1 year &nbsp;·&nbsp; Gained interpersonal and problem-solving skills while supporting customers and colleagues.</p>
+                </div>
+            </div>
+            <div class="exp-item">
+                <div class="exp-dot"></div>
+                <div class="exp-content">
+                    <h5>HAVO — Computer Science</h5>
+                    <p>2022 – 2024 &nbsp;·&nbsp; Studied computer science, built a hangman game in JavaScript, and laid the groundwork for my programming career.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== SKILLS ==================== -->
+<section class="section section-alt" id="skills">
+    <div class="container">
+        <div class="section-header text-center reveal">
+            <span class="section-eyebrow">What I Work With</span>
+            <h2>Technical Skills</h2>
+        </div>
+        <p class="skills-intro reveal">Proficient in full-stack web development and game development, with a growing toolkit of modern technologies.</p>
+        <div class="skills-grid reveal">
+            <div class="skill-card">
+                <img src="img/html-5.png" alt="HTML5">
+                <span>HTML5</span>
+            </div>
+            <div class="skill-card">
+                <img src="img/css-3.png" alt="CSS3">
+                <span>CSS3</span>
+            </div>
+            <div class="skill-card">
+                <img src="img/js-file.png" alt="JavaScript">
+                <span>JavaScript</span>
+            </div>
+            <div class="skill-card">
+                <img src="img/bootstrap.png" alt="Bootstrap">
+                <span>Bootstrap</span>
+            </div>
+            <div class="skill-card">
+                <img src="img/php.png" alt="PHP">
+                <span>PHP 8</span>
+            </div>
+            <div class="skill-card">
+                <img src="img/database.png" alt="MySQL">
+                <span>MySQL</span>
+            </div>
+            <div class="skill-card">
+                <img src="img/unity.png" alt="Unity">
+                <span>Unity</span>
+            </div>
+            <div class="skill-card">
+                <img src="img/c-sharp.png" alt="C#">
+                <span>C#</span>
+            </div>
+            <div class="skill-card">
+                <img src="img/icons8-react.gif" alt="React (learning)">
+                <span>React</span>
+            </div>
+            <div class="skill-card">
+                <img src="img/icons8-tailwind-css-64.png" alt="Tailwind CSS (learning)">
+                <span>Tailwind</span>
+            </div>
+        </div>
+        <p class="skills-note reveal">React &amp; Tailwind are currently being learned — all others are actively used in projects.</p>
+    </div>
+</section>
+
+<!-- ==================== ADDITIONAL EXPERIENCE ==================== -->
+<section class="section">
+    <div class="container">
+        <div class="section-header text-center reveal">
+            <span class="section-eyebrow">Beyond Code</span>
+            <h2>Additional Experience</h2>
+        </div>
+        <p class="text-center reveal" style="max-width:680px;margin:0 auto;">Outside of IT, I have valuable work experience in the retail sector. Working at Albert Heijn and Lidl over the past 3+ years has strengthened my interpersonal skills, customer focus, and ability to take initiative — qualities I bring directly into every team project.</p>
+    </div>
+</section>
+
+<!-- ==================== PROJECTS ==================== -->
+<section class="section section-alt" id="projects">
+    <div class="container">
+        <div class="section-header text-center reveal">
+            <span class="section-eyebrow">What I've Built</span>
+            <h2>Projects</h2>
+        </div>
+        <p class="projects-intro reveal">A collection of projects from my ICT studies — click any card to view the full details, analysis, and documentation.</p>
+
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mb-4">
 
-            <!-- Project 1: Higher-Lower Game -->
-            <div class="col">
+            <!-- Project 1 -->
+            <div class="col reveal">
                 <div class="card h-100 project-card border-0">
                     <div class="project-card-header">
                         <img src="img/higher-lower-game.png" class="card-img-top project-img" alt="Higher-Lower Game">
@@ -134,11 +297,11 @@
                 </div>
             </div>
 
-            <!-- Project 2: Build a New Game -->
-            <div class="col">
+            <!-- Project 2 -->
+            <div class="col reveal">
                 <div class="card h-100 project-card border-0">
                     <div class="project-card-header">
-                        <img src="img/Schermafbeelding 2025-03-21 113418.png" class="card-img-top project-img" alt="Build a New Game - Chess">
+                        <img src="img/Schermafbeelding 2025-03-21 113418.png" class="card-img-top project-img" alt="Build a New Game – Game Island">
                         <div class="project-badge">Team</div>
                     </div>
                     <div class="card-body d-flex flex-column">
@@ -158,8 +321,8 @@
                 </div>
             </div>
 
-            <!-- Project 3: Review Your Experience -->
-            <div class="col">
+            <!-- Project 3 -->
+            <div class="col reveal">
                 <div class="card h-100 project-card border-0">
                     <div class="project-card-header">
                         <img src="img/The-experts-GamersCastle-Webshop.png" class="card-img-top project-img" alt="Review Your Experience – Pro Gamers">
@@ -180,7 +343,7 @@
                                 <i class="bi bi-eye-fill me-1"></i> View Details
                             </a>
                             <a href="https://github.com/ROCMondriaanTIN/sd24-project-p03-review-your-experience-pro-gamers"
-                               class="btn btn-github" target="_blank" rel="noopener noreferrer" title="GitHub Repo">
+                               class="btn btn-github" target="_blank" rel="noopener noreferrer" title="GitHub Repo" aria-label="GitHub Repository">
                                 <i class="bi bi-github"></i>
                             </a>
                         </div>
@@ -188,8 +351,8 @@
                 </div>
             </div>
 
-            <!-- Project 4: The Shadow Monarch's Quest -->
-            <div class="col">
+            <!-- Project 4 -->
+            <div class="col reveal">
                 <div class="card h-100 project-card border-0">
                     <div class="project-card-header">
                         <img src="img/unity.png" class="card-img-top project-img project-img-contain" alt="The Shadow Monarch's Quest">
@@ -209,7 +372,7 @@
                                 <i class="bi bi-eye-fill me-1"></i> View Details
                             </a>
                             <a href="https://github.com/ROCMondriaanTIN/sd24-p04-kdl-gp-game-the-shadow-monarch-s"
-                               class="btn btn-github" target="_blank" rel="noopener noreferrer" title="GitHub Repo">
+                               class="btn btn-github" target="_blank" rel="noopener noreferrer" title="GitHub Repo" aria-label="GitHub Repository">
                                 <i class="bi bi-github"></i>
                             </a>
                         </div>
@@ -217,8 +380,8 @@
                 </div>
             </div>
 
-            <!-- Project 5: Portfolio Website (Old Version) -->
-            <div class="col">
+            <!-- Project 5 -->
+            <div class="col reveal">
                 <div class="card h-100 project-card border-0">
                     <div class="project-card-header">
                         <img src="img/Portofolio-old-version.png" class="card-img-top project-img" alt="Portfolio Website Old Version">
@@ -242,8 +405,8 @@
                 </div>
             </div>
 
-            <!-- Project 6: Budget Buddy – Eclipse Sovereigns -->
-            <div class="col">
+            <!-- Project 6 -->
+            <div class="col reveal">
                 <div class="card h-100 project-card border-0">
                     <div class="project-card-header">
                         <img src="img/php.png" class="card-img-top project-img project-img-contain" alt="Budget Buddy – Eclipse Sovereigns">
@@ -258,13 +421,13 @@
                             <span class="badge">Twig</span>
                             <span class="badge">MySQL</span>
                         </div>
-                        <p class="card-text flex-grow-1">A full-stack Symfony 7 budgeting web app — secure auth, budget categories, transaction tracking, community forum &amp; Docker-Compose setup. Full architecture analysis included.</p>
+                        <p class="card-text flex-grow-1">A full-stack Symfony 7 budgeting web app — secure auth, budget categories, transaction tracking, community forum &amp; full architecture analysis.</p>
                         <div class="d-flex gap-2 mt-auto">
                             <a href="projects/project6.html" class="btn btn-primary flex-fill">
                                 <i class="bi bi-eye-fill me-1"></i> View Details
                             </a>
                             <a href="https://github.com/ROCMondriaanTIN/sd24-project-p05-budget-buddy-eclipse-sovereigns"
-                               class="btn btn-github" target="_blank" rel="noopener noreferrer" title="GitHub Repo">
+                               class="btn btn-github" target="_blank" rel="noopener noreferrer" title="GitHub Repo" aria-label="GitHub Repository">
                                 <i class="bi bi-github"></i>
                             </a>
                         </div>
@@ -276,54 +439,92 @@
     </div>
 </section>
 
-    <section id="contact" class="bg-secondary text-white py-5">
-        <div class="container">
-            <h2 class="text-center mb-4">Contact Me</h2>
-            <p class="text-center mb-4">
-                Companies can reach me via email at 
-                <a href="mailto:Alhamwi535@gmail.com" class="text-white text-decoration-underline">Alhamwi535@gmail.com</a>.
-                Please include the reason why you want to contact me.
-            </p>
-            <form id="contactForm" class="contact-form mx-auto" style="max-width: 600px;" novalidate>
-                <div class="mb-3">
-                    <label for="contactName" class="form-label">Name</label>
-                    <input type="text" id="contactName" class="form-control" placeholder="Your name" required aria-required="true" />
-                    <div class="invalid-feedback">
-                        Please enter your name.
-                    </div>
-                </div>
-                <div class="mb-3">
-                    <label for="contactEmail" class="form-label">Email</label>
-                    <input type="email" id="contactEmail" class="form-control" placeholder="Your email" required aria-required="true" />
-                    <div class="invalid-feedback">
-                        Please enter a valid email address.
-                    </div>
-                </div>
-                <div class="mb-3">
-                    <label for="contactReason" class="form-label">Reason for Contact</label>
-                    <textarea id="contactReason" class="form-control" rows="4" placeholder="Please write your reason here..." required aria-required="true"></textarea>
-                    <div class="invalid-feedback">
-                        Please provide a reason for contacting.
-                    </div>
-                </div>
-                <div id="formMessage" class="mb-3 text-center"></div>
-                <div class="text-center">
-                    <button type="submit" class="btn btn-light">Send</button>
-                </div>
-            </form>
-            <p class="text-center mt-4">
-                Or visit my Instagram page: 
-                <a href="https://www.instagram.com/achie_ms_05" target="_blank" rel="noopener noreferrer" class="text-white text-decoration-underline">@achie_ms_05</a>
-            </p>
+<!-- ==================== CONTACT ==================== -->
+<section id="contact" class="section">
+    <div class="container">
+        <div class="section-header text-center reveal">
+            <span class="section-eyebrow">Get In Touch</span>
+            <h2>Contact Me</h2>
         </div>
-    </section>
+        <div class="contact-inner reveal">
 
-    <footer class="bg-dark text-white text-center py-3 mt-5">
-        <div class="container">
-            &copy; Portfolio website Ahmed Alhamwi 2025. Alle rechten voorbehouden.
+            <!-- Left: Info -->
+            <div class="contact-info">
+                <h4>Let's talk.</h4>
+                <p>I'm open to internship opportunities, freelance work, or just a friendly conversation about software development.</p>
+                <div class="contact-detail">
+                    <i class="bi bi-envelope-fill"></i>
+                    <a href="mailto:Alhamwi535@gmail.com">Alhamwi535@gmail.com</a>
+                </div>
+                <div class="contact-detail">
+                    <i class="bi bi-instagram"></i>
+                    <a href="https://www.instagram.com/achie_ms_05" target="_blank" rel="noopener">@achie_ms_05</a>
+                </div>
+                <div class="contact-detail">
+                    <i class="bi bi-geo-alt-fill"></i>
+                    <span>The Hague, Netherlands</span>
+                </div>
+                <div class="contact-detail">
+                    <i class="bi bi-mortarboard-fill"></i>
+                    <span>ROC Mondriaan — ICT Software Dev</span>
+                </div>
+            </div>
+
+            <!-- Right: Form -->
+            <div class="contact-form-wrap">
+                <form id="contactForm" novalidate>
+                    <div class="mb-3">
+                        <label for="contactName" class="form-label">Name</label>
+                        <input type="text" id="contactName" class="form-control" placeholder="Your name" required aria-required="true">
+                        <div class="invalid-feedback">Please enter your name.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="contactEmail" class="form-label">Email</label>
+                        <input type="email" id="contactEmail" class="form-control" placeholder="Your email" required aria-required="true">
+                        <div class="invalid-feedback">Please enter a valid email address.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="contactReason" class="form-label">Message</label>
+                        <textarea id="contactReason" class="form-control" rows="4" placeholder="What would you like to talk about?" required aria-required="true"></textarea>
+                        <div class="invalid-feedback">Please provide a message.</div>
+                    </div>
+                    <div id="formMessage" class="mb-3 text-center"></div>
+                    <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                </form>
+            </div>
+
         </div>
-    </footer>
+    </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="footer-main">
+    <div class="container">
+        <div class="footer-top">
+            <div class="footer-brand-text">Ahmed.</div>
+            <nav class="footer-nav" aria-label="Footer navigation">
+                <a href="#home">Home</a>
+                <a href="#about-me">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <div class="footer-social-links">
+                <a href="https://github.com/ROCMondriaanTIN" target="_blank" rel="noopener" aria-label="GitHub">
+                    <i class="bi bi-github"></i>
+                </a>
+                <a href="https://www.instagram.com/achie_ms_05" target="_blank" rel="noopener" aria-label="Instagram">
+                    <i class="bi bi-instagram"></i>
+                </a>
+                <a href="mailto:Alhamwi535@gmail.com" aria-label="Email">
+                    <i class="bi bi-envelope-fill"></i>
+                </a>
+            </div>
+        </div>
+        <p class="footer-copy">&copy; Portfolio website Ahmed Alhamwi 2025. Alle rechten voorbehouden.</p>
+    </div>
+</footer>
+
 <script src="js/main.js"></script>
-
 </body>
 </html>

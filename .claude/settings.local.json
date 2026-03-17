@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "WebFetch(domain:portfolio-ecru-omega-10.vercel.app)"
+      "WebFetch(domain:portfolio-ecru-omega-10.vercel.app)",
+      "Bash(curl -L \"https://icon.icepanel.io/Technology/svg/Symfony.svg\" -o \"c:/Github_Project/AhmedAlhamwi/img/symfony.svg\")"
     ]
   }
 }

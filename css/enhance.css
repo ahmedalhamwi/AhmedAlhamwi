@@ -875,3 +875,6 @@ pre {
     padding: clamp(1.25rem, 3vw, 2rem);
     border-radius: 18px;
 }
+
+/* Dark monochrome logos need to be light on the dark skill cards */
+.skill-card img[src*="skills/nextjs"], .skill-card img[src*="skills/prisma"] { filter: invert(1); }

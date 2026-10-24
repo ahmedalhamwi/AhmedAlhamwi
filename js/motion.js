@@ -191,7 +191,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const original = el.textContent.trim();
       // Only plain numbers like 18, 1.3k, 400+, 4/4 or 7.5 — anything else is left as is
       const m = original.match(/^(\d+(?:[.,]\d+)?)(.*)$/);
-      if (!m) return;
+      // ordinals like 3rd stay as they are; counting up through 0rd, 1rd looks broken
+      if (!m || /^(st|nd|rd|th)\b/i.test(m[2])) return;
       const target = parseFloat(m[1].replace(',', '.'));
       const decimals = (m[1].split(/[.,]/)[1] || '').length;
       const suffix = m[2];

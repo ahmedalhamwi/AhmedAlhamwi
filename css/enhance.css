@@ -878,3 +878,10 @@ pre {
 
 /* Dark monochrome logos need to be light on the dark skill cards */
 .skill-card img[src*="skills/nextjs"], .skill-card img[src*="skills/prisma"] { filter: invert(1); }
+
+/* Availability line above the footer copyright */
+.footer-available { text-align: center; margin: 1.5rem 0 .5rem; color: var(--text-secondary); font-size: .95rem; }
+.footer-available a { color: var(--red-soft); font-weight: 600; text-decoration: none; }
+.footer-available a:hover { text-decoration: underline; }
+/* keep the back-to-top button from covering the copyright line on phones */
+@media (max-width: 575px) { .footer-main { padding-bottom: 5rem; } }

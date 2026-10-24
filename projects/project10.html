@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/enhance.css">
+    <title>Project 10: The Lone Wolf's Shadows – Ahmed Alhamwi</title>
+    <meta name="description" content="A local multi-agent AI coding assistant as a Tauri desktop app — 7 specialist agents, auto-routing, code execution sandbox, and cloud-to-local fallback.">
+</head>
+<body>
+
+<nav id="navbar" class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">Portfolio</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="../index.html#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="../index.html#about-me">About Me</a></li>
+                <li class="nav-item"><a class="nav-link active" href="../index.html#projects">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="../index.html#contact">Contact</a></li>
+                <li class="nav-item">
+                    <button id="theme-toggle" class="theme-toggle btn btn-outline-light ms-3">🌙</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero -->
+<header class="proj-page-hero">
+    <div class="container">
+        <a href="../index.html#projects" class="back-link">
+            <i class="bi bi-arrow-left"></i> Back to Projects
+        </a>
+        <div class="proj-page-badge mb-3">AI / Desktop App</div>
+        <h1>Project 10: The Lone Wolf's Shadows</h1>
+        <p class="lead">A local multi-agent AI coding assistant packaged as a Tauri desktop app. A prompt is routed to the right specialist agent, which pulls context from your project files and returns an answer — plus a before/after diff when code changes. Cloud models are tried first, with automatic fallback to a local Ollama model.</p>
+        <div class="tech-badges mt-3">
+            <span class="badge">Python</span>
+            <span class="badge">FastAPI</span>
+            <span class="badge">React 19</span>
+            <span class="badge">Tauri 2</span>
+            <span class="badge">Ollama</span>
+            <span class="badge">MCP</span>
+        </div>
+        <div class="proj-stat-row mt-4">
+            <div class="proj-stat"><div class="stat-number">7</div><div class="stat-label">Specialist Agents</div></div>
+            <div class="proj-stat"><div class="stat-number">30</div><div class="stat-label">Backend Test Files</div></div>
+            <div class="proj-stat"><div class="stat-number">2</div><div class="stat-label">MCP Servers</div></div>
+            <div class="proj-stat"><div class="stat-number">3</div><div class="stat-label">Platforms</div></div>
+        </div>
+    </div>
+</header>
+
+<main class="py-2">
+    <div class="container">
+
+        <!-- Key Features -->
+        <div class="proj-page-section">
+            <h3 class="proj-page-section-title"><i class="bi bi-star"></i> Key Features</h3>
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <ul class="feature-list">
+                        <li><i class="bi bi-check-circle-fill"></i> 7 agents: coding, debugging, security, design, planning, research, vision</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Keyword + LLM-fallback router with a persistent result cache</li>
+                        <li><i class="bi bi-check-circle-fill"></i> coding → reviewer → security pipeline for review prompts</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Code execution sandbox (Python / JS / TS) with a 3-attempt auto-fix loop</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <ul class="feature-list">
+                        <li><i class="bi bi-check-circle-fill"></i> Research agent: plan, search, scrape top results, synthesise a report</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Filesystem and memory MCP servers registered at startup</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Hybrid mode: cloud first, transparent local fallback, model badge on every reply</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Dark glass-morphism UI with streaming chat, diff modal and admin dashboard</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Technology Stack -->
+        <div class="proj-page-section">
+            <h3 class="proj-page-section-title"><i class="bi bi-layers"></i> Technology Stack</h3>
+            <div class="table-responsive">
+                <table class="table table-sm proj-table">
+                    <thead>
+                        <tr><th>Layer</th><th>Technology</th><th>Why</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Backend</td><td>Python, FastAPI, Alembic, slowapi</td><td>Typed API with migrations and rate limiting</td></tr>
+                        <tr><td>Frontend</td><td>React 19, Vite</td><td>Streaming chat UI and management dashboard</td></tr>
+                        <tr><td>Desktop</td><td>Tauri 2 (Rust)</td><td>Windows / Mac / Linux app that auto-starts the backend</td></tr>
+                        <tr><td>Models</td><td>Ollama locally, cloud endpoints optional</td><td>No telemetry leaves the machine</td></tr>
+                        <tr><td>Testing</td><td>pytest</td><td>30 backend test files</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="proj-page-section">
+            <div class="cta-section">
+                <h4>Want to See the Code?</h4>
+                <p class="mb-4" style="color:var(--text-secondary);">The repository is private. Get in touch and I'll happily walk you through the code or give you access.</p>
+                <a href="../index.html#contact" class="btn btn-github me-2">
+                    <i class="bi bi-envelope me-1"></i> Contact Me
+                </a>
+                <a href="../index.html#projects" class="btn btn-primary">
+                    <i class="bi bi-arrow-left me-1"></i> Back to Projects
+                </a>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+<footer class="bg-dark text-white text-center py-3 mt-5">
+    <div class="container">
+        &copy; Portfolio website Ahmed Alhamwi 2026. Alle rechten voorbehouden.
+    </div>
+</footer>
+<script src="../js/main.js"></script>
+<script src="../js/motion.js"></script>
+</body>
+</html>
